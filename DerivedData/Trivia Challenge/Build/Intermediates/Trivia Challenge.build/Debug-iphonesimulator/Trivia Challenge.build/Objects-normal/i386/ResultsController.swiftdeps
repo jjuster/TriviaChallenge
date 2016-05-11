@@ -1,0 +1,223 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ResultsController"
+provides-nominal:
+- "C16Trivia_Challenge17ResultsController"
+provides-member:
+- ["C16Trivia_Challenge17ResultsController", ""]
+provides-dynamic-lookup:
+- "viewDidLoad"
+depends-top-level:
+- "ResultsController"
+- "TemplateController"
+- !private "StringLiteralType"
+depends-member:
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "loadBackgroundColor"]
+- !private ["Ps9AnyObject", "loadButtons"]
+- !private ["Ps9AnyObject", "loadImages"]
+- !private ["Ps9AnyObject", "loadInputs"]
+- !private ["Ps9AnyObject", "loadText"]
+- !private ["Ps9AnyObject", "pageType"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "loadBackgroundColor"]
+- !private ["Ps11CVarArgType", "loadButtons"]
+- !private ["Ps11CVarArgType", "loadImages"]
+- !private ["Ps11CVarArgType", "loadInputs"]
+- !private ["Ps11CVarArgType", "loadText"]
+- !private ["Ps11CVarArgType", "pageType"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "loadBackgroundColor"]
+- !private ["Ps28CustomDebugStringConvertible", "loadButtons"]
+- !private ["Ps28CustomDebugStringConvertible", "loadImages"]
+- !private ["Ps28CustomDebugStringConvertible", "loadInputs"]
+- !private ["Ps28CustomDebugStringConvertible", "loadText"]
+- !private ["Ps28CustomDebugStringConvertible", "pageType"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "loadBackgroundColor"]
+- !private ["Ps23CustomStringConvertible", "loadButtons"]
+- !private ["Ps23CustomStringConvertible", "loadImages"]
+- !private ["Ps23CustomStringConvertible", "loadInputs"]
+- !private ["Ps23CustomStringConvertible", "loadText"]
+- !private ["Ps23CustomStringConvertible", "pageType"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "loadBackgroundColor"]
+- !private ["Ps9Equatable", "loadButtons"]
+- !private ["Ps9Equatable", "loadImages"]
+- !private ["Ps9Equatable", "loadInputs"]
+- !private ["Ps9Equatable", "loadText"]
+- !private ["Ps9Equatable", "pageType"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "loadBackgroundColor"]
+- !private ["Ps8Hashable", "loadButtons"]
+- !private ["Ps8Hashable", "loadImages"]
+- !private ["Ps8Hashable", "loadInputs"]
+- !private ["Ps8Hashable", "loadText"]
+- !private ["Ps8Hashable", "pageType"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "loadBackgroundColor"]
+- !private ["PSo8NSCoding", "loadButtons"]
+- !private ["PSo8NSCoding", "loadImages"]
+- !private ["PSo8NSCoding", "loadInputs"]
+- !private ["PSo8NSCoding", "loadText"]
+- !private ["PSo8NSCoding", "pageType"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "loadBackgroundColor"]
+- !private ["PSo26NSExtensionRequestHandling", "loadButtons"]
+- !private ["PSo26NSExtensionRequestHandling", "loadImages"]
+- !private ["PSo26NSExtensionRequestHandling", "loadInputs"]
+- !private ["PSo26NSExtensionRequestHandling", "loadText"]
+- !private ["PSo26NSExtensionRequestHandling", "pageType"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "loadBackgroundColor"]
+- !private ["CSo8NSObject", "loadButtons"]
+- !private ["CSo8NSObject", "loadImages"]
+- !private ["CSo8NSObject", "loadInputs"]
+- !private ["CSo8NSObject", "loadText"]
+- !private ["CSo8NSObject", "pageType"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "loadBackgroundColor"]
+- !private ["PSo16NSObjectProtocol", "loadButtons"]
+- !private ["PSo16NSObjectProtocol", "loadImages"]
+- !private ["PSo16NSObjectProtocol", "loadInputs"]
+- !private ["PSo16NSObjectProtocol", "loadText"]
+- !private ["PSo16NSObjectProtocol", "pageType"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Sq", "deinit"]
+- ["C16Trivia_Challenge17ResultsController", "deinit"]
+- ["C16Trivia_Challenge17ResultsController", "init"]
+- !private ["C16Trivia_Challenge17ResultsController", "loadBackgroundColor"]
+- !private ["C16Trivia_Challenge17ResultsController", "loadButtons"]
+- !private ["C16Trivia_Challenge17ResultsController", "loadImages"]
+- !private ["C16Trivia_Challenge17ResultsController", "loadInputs"]
+- !private ["C16Trivia_Challenge17ResultsController", "loadText"]
+- !private ["C16Trivia_Challenge17ResultsController", "pageType"]
+- ["C16Trivia_Challenge17ResultsController", "viewDidLoad"]
+- ["C16Trivia_Challenge18TemplateController", "init"]
+- !private ["C16Trivia_Challenge18TemplateController", "loadBackgroundColor"]
+- !private ["C16Trivia_Challenge18TemplateController", "loadButtons"]
+- !private ["C16Trivia_Challenge18TemplateController", "loadImages"]
+- !private ["C16Trivia_Challenge18TemplateController", "loadInputs"]
+- !private ["C16Trivia_Challenge18TemplateController", "loadText"]
+- !private ["C16Trivia_Challenge18TemplateController", "pageType"]
+- ["C16Trivia_Challenge18TemplateController", "viewDidLoad"]
+- ["C16Trivia_Challenge18TemplateController", ""]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "loadBackgroundColor"]
+- !private ["PSo21UIAppearanceContainer", "loadButtons"]
+- !private ["PSo21UIAppearanceContainer", "loadImages"]
+- !private ["PSo21UIAppearanceContainer", "loadInputs"]
+- !private ["PSo21UIAppearanceContainer", "loadText"]
+- !private ["PSo21UIAppearanceContainer", "pageType"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "loadBackgroundColor"]
+- !private ["PSo18UIContentContainer", "loadButtons"]
+- !private ["PSo18UIContentContainer", "loadImages"]
+- !private ["PSo18UIContentContainer", "loadInputs"]
+- !private ["PSo18UIContentContainer", "loadText"]
+- !private ["PSo18UIContentContainer", "pageType"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "loadBackgroundColor"]
+- !private ["PSo18UIFocusEnvironment", "loadButtons"]
+- !private ["PSo18UIFocusEnvironment", "loadImages"]
+- !private ["PSo18UIFocusEnvironment", "loadInputs"]
+- !private ["PSo18UIFocusEnvironment", "loadText"]
+- !private ["PSo18UIFocusEnvironment", "pageType"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "loadBackgroundColor"]
+- !private ["CSo11UIResponder", "loadButtons"]
+- !private ["CSo11UIResponder", "loadImages"]
+- !private ["CSo11UIResponder", "loadInputs"]
+- !private ["CSo11UIResponder", "loadText"]
+- !private ["CSo11UIResponder", "pageType"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "loadBackgroundColor"]
+- !private ["PSo16UIStateRestoring", "loadButtons"]
+- !private ["PSo16UIStateRestoring", "loadImages"]
+- !private ["PSo16UIStateRestoring", "loadInputs"]
+- !private ["PSo16UIStateRestoring", "loadText"]
+- !private ["PSo16UIStateRestoring", "pageType"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "loadBackgroundColor"]
+- !private ["PSo18UITraitEnvironment", "loadButtons"]
+- !private ["PSo18UITraitEnvironment", "loadImages"]
+- !private ["PSo18UITraitEnvironment", "loadInputs"]
+- !private ["PSo18UITraitEnvironment", "loadText"]
+- !private ["PSo18UITraitEnvironment", "pageType"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "loadBackgroundColor"]
+- !private ["CSo16UIViewController", "loadButtons"]
+- !private ["CSo16UIViewController", "loadImages"]
+- !private ["CSo16UIViewController", "loadInputs"]
+- !private ["CSo16UIViewController", "loadText"]
+- !private ["CSo16UIViewController", "pageType"]
+- ["CSo16UIViewController", "viewDidLoad"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Sq"
+- "C16Trivia_Challenge17ResultsController"
+- "C16Trivia_Challenge18TemplateController"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/i386.swiftmodule"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/i386.swiftmodule"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+interface-hash: "1e6bddf0c781b4b10906817f3abaa3cb"
