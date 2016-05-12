@@ -8,14 +8,14 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "CFAbsoluteTime"
-- "CustomStringConvertible"
-- "FloatLiteralType"
-- !private "-"
-- !private "Array"
-- "NSTimeInterval"
-- "CustomDebugStringConvertible"
 - !private "StringLiteralType"
 - "Timeline"
+- "CustomDebugStringConvertible"
+- "NSTimeInterval"
+- !private "-"
+- !private "Array"
+- "FloatLiteralType"
+- "CustomStringConvertible"
 - "String"
 depends-member:
 - !private ["Ps9AnyObject", "init"]

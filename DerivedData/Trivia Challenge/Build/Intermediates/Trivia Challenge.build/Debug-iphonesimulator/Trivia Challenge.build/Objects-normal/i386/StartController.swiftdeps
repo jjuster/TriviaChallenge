@@ -6,20 +6,20 @@ provides-nominal:
 provides-member:
 - ["C16Trivia_Challenge15StartController", ""]
 provides-dynamic-lookup:
-- "setupButtons"
-- "loadQuestions"
 - "viewDidLoad"
 - "pageType"
 - "loadSettings"
+- "loadQuestions"
+- "setupButtons"
 depends-top-level:
-- !private "!="
-- !private "StringLiteralType"
-- !private "SettingsController"
-- !private "QuestionsController"
-- "StartController"
 - "TemplateController"
-- "String"
 - !private "UIButton"
+- !private "QuestionsController"
+- "String"
+- !private "StringLiteralType"
+- !private "!="
+- !private "SettingsController"
+- "StartController"
 depends-member:
 - !private ["Ps9AnyObject", "QuestionsController"]
 - !private ["Ps9AnyObject", "SettingsController"]

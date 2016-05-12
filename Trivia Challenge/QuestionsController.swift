@@ -9,6 +9,7 @@ import UIKit
 
 class QuestionsController: TemplateController {
     override var pageType: String { return "question" }
+    var guessed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,12 +55,40 @@ class QuestionsController: TemplateController {
     }
     
     func guess(button : UIButton) {
+        if (self.guessed) {
+            return
+        }
+        self.guessed = true
+        
         let am = AssetManager.sharedInstance
+        
         if (button.tag == am.gameState!.currentQuestion()!.correctAnswer) {
             am.gameState!.correctAnswers += 1
+        } else {
+            let toImage = self.placeholderImages["answer_incorrect"]!
+            UIView.transitionWithView(button,
+                                      duration: 0.3,
+                                      options: UIViewAnimationOptions.TransitionCrossDissolve,
+                                      animations: { button.setBackgroundImage(toImage, forState: .Normal) },
+                                      completion: nil)
         }
-        am.gameState!.questionIndex += 1
         
+        let answerTitle = "answer_\(am.gameState!.currentQuestion()!.correctAnswer)"
+        let correctButton = self.viewDictionary[answerTitle] as! UIButton
+        let toImage = self.placeholderImages["answer_correct"]
+        UIView.transitionWithView(correctButton,
+                                  duration: 0.3,
+                                  options: UIViewAnimationOptions.TransitionCrossDissolve,
+                                  animations: { correctButton.setBackgroundImage(toImage, forState: .Normal) },
+                                  completion: nil)
+
+        NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1.2), target: self, selector: #selector(self.nextQuestion), userInfo: nil, repeats: false)
+    }
+    
+    func nextQuestion() {
+        let am = AssetManager.sharedInstance
+        
+        am.gameState!.questionIndex += 1
         if (am.gameState!.currentQuestion() != nil) {
             self.loadVC(QuestionsController())
         } else {

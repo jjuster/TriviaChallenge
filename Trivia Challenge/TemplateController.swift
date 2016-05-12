@@ -12,7 +12,7 @@ class TemplateController: UIViewController {
     var pageType: String { return "" }
     var gameCode : String?
     var viewDictionary : NSMutableDictionary = NSMutableDictionary()
-    var placeholderImages : NSMutableDictionary = NSMutableDictionary()
+    var placeholderImages : [String:UIImage] = [String:UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

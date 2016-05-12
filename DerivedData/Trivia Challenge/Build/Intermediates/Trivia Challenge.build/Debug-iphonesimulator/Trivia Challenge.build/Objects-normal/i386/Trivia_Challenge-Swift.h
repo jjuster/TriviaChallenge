@@ -163,6 +163,7 @@ SWIFT_CLASS("_TtC16Trivia_Challenge8Question")
 @end
 
 @class NSMutableDictionary;
+@class UIImage;
 @class NSBundle;
 @class NSCoder;
 
@@ -171,7 +172,7 @@ SWIFT_CLASS("_TtC16Trivia_Challenge18TemplateController")
 @property (nonatomic, readonly, copy) NSString * _Nonnull pageType;
 @property (nonatomic, copy) NSString * _Nullable gameCode;
 @property (nonatomic, strong) NSMutableDictionary * _Nonnull viewDictionary;
-@property (nonatomic, strong) NSMutableDictionary * _Nonnull placeholderImages;
+@property (nonatomic, copy) NSDictionary<NSString *, UIImage *> * _Nonnull placeholderImages;
 - (void)viewDidLoad;
 - (void)loadImages;
 - (void)loadText;
@@ -194,9 +195,11 @@ SWIFT_CLASS("_TtC16Trivia_Challenge18TemplateController")
 SWIFT_CLASS("_TtC16Trivia_Challenge19QuestionsController")
 @interface QuestionsController : TemplateController
 @property (nonatomic, readonly, copy) NSString * _Nonnull pageType;
+@property (nonatomic) BOOL guessed;
 - (void)viewDidLoad;
 - (void)setupButtons;
 - (void)guess:(UIButton * _Nonnull)button;
+- (void)nextQuestion;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

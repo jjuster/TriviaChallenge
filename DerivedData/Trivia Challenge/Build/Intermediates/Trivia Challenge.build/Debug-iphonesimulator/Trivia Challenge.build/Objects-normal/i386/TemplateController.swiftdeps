@@ -6,57 +6,57 @@ provides-nominal:
 provides-member:
 - ["C16Trivia_Challenge18TemplateController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "loadImages"
-- "loadInputs"
-- "restart"
-- "parseJustification"
-- "didReceiveMemoryWarning"
-- "matchesForRegexInText"
-- "loadBackgroundColor"
-- "placeholderImages"
-- "gameCode"
 - "loadText"
-- "viewDictionary"
+- "matchesForRegexInText"
 - "addGameState"
+- "loadBackgroundColor"
+- "viewDictionary"
+- "placeholderImages"
+- "viewDidLoad"
 - "pageType"
+- "loadImages"
+- "gameCode"
+- "loadInputs"
+- "parseJustification"
+- "loadButtons"
+- "restart"
+- "didReceiveMemoryWarning"
 - "loadVC"
 - "viewWillAppear"
-- "loadButtons"
 depends-top-level:
-- !private "&&"
-- !private "UIImage"
-- !private "UIScreen"
-- !private "AssetManager"
-- !private "CGFloat"
+- !private "Array"
+- "Bool"
+- "String"
 - !private "NSString"
-- !private "UILabel"
-- !private "UIImageView"
-- !private "NSData"
-- !private "UITextField"
-- !private "BooleanLiteralType"
-- !private "NSMakeRange"
-- !private "NSError"
-- !private "UnicodeScalarType"
-- !private "UIButton"
-- !private "NSRegularExpression"
 - !private "UIFont"
-- "NSMutableDictionary"
-- !private "||"
-- !private "/"
-- "TemplateController"
+- !private "NSData"
+- !private "UIScreen"
 - !private "=="
 - !private "~="
-- !private "Float"
 - !private "print"
-- !private "UIColor"
-- !private "Array"
-- !private "!="
-- "NSTextAlignment"
-- "Bool"
+- !private "UILabel"
+- !private "UIImageView"
+- "TemplateController"
 - !private "StringLiteralType"
-- "String"
+- !private "UnicodeScalarType"
+- !private "!="
+- !private "NSMakeRange"
+- !private "NSError"
+- !private "&&"
+- !private "NSRegularExpression"
 - "UIViewController"
+- "UIImage"
+- !private "AssetManager"
+- !private "/"
+- !private "UIColor"
+- !private "||"
+- !private "UIButton"
+- "NSTextAlignment"
+- !private "Float"
+- !private "CGFloat"
+- "NSMutableDictionary"
+- !private "BooleanLiteralType"
+- !private "UITextField"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "AssetManager"]
@@ -67,10 +67,11 @@ depends-member:
 - ["Ps9AnyObject", "NSMutableDictionary"]
 - !private ["Ps9AnyObject", "NSRegularExpression"]
 - !private ["Ps9AnyObject", "NSTextAlignment"]
+- ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "UIButton"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UIFont"]
-- !private ["Ps9AnyObject", "UIImage"]
+- ["Ps9AnyObject", "UIImage"]
 - !private ["Ps9AnyObject", "UIImageView"]
 - !private ["Ps9AnyObject", "UILabel"]
 - !private ["Ps9AnyObject", "UIScreen"]
@@ -200,10 +201,11 @@ depends-member:
 - ["Ps11CVarArgType", "NSMutableDictionary"]
 - !private ["Ps11CVarArgType", "NSRegularExpression"]
 - !private ["Ps11CVarArgType", "NSTextAlignment"]
+- ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "UIButton"]
 - !private ["Ps11CVarArgType", "UIColor"]
 - !private ["Ps11CVarArgType", "UIFont"]
-- !private ["Ps11CVarArgType", "UIImage"]
+- ["Ps11CVarArgType", "UIImage"]
 - !private ["Ps11CVarArgType", "UIImageView"]
 - !private ["Ps11CVarArgType", "UILabel"]
 - !private ["Ps11CVarArgType", "UIScreen"]
@@ -275,6 +277,7 @@ depends-member:
 - !private ["Ps14CollectionType", "exists"]
 - !private ["Ps14CollectionType", "first"]
 - !private ["Ps14CollectionType", "floatValue"]
+- ["Ps14CollectionType", "init"]
 - !private ["Ps14CollectionType", "map"]
 - !private ["Ps14CollectionType", "stringValue"]
 - !private ["Ps14CollectionType", "subscript"]
@@ -301,11 +304,12 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "NSMutableDictionary"]
 - !private ["Ps28CustomDebugStringConvertible", "NSRegularExpression"]
 - !private ["Ps28CustomDebugStringConvertible", "NSTextAlignment"]
+- ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UIButton"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UIFont"]
-- !private ["Ps28CustomDebugStringConvertible", "UIImage"]
+- ["Ps28CustomDebugStringConvertible", "UIImage"]
 - !private ["Ps28CustomDebugStringConvertible", "UIImageView"]
 - !private ["Ps28CustomDebugStringConvertible", "UILabel"]
 - !private ["Ps28CustomDebugStringConvertible", "UIScreen"]
@@ -387,11 +391,12 @@ depends-member:
 - ["Ps23CustomStringConvertible", "NSMutableDictionary"]
 - !private ["Ps23CustomStringConvertible", "NSRegularExpression"]
 - !private ["Ps23CustomStringConvertible", "NSTextAlignment"]
+- ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "UIButton"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UIFont"]
-- !private ["Ps23CustomStringConvertible", "UIImage"]
+- ["Ps23CustomStringConvertible", "UIImage"]
 - !private ["Ps23CustomStringConvertible", "UIImageView"]
 - !private ["Ps23CustomStringConvertible", "UILabel"]
 - !private ["Ps23CustomStringConvertible", "UIScreen"]
@@ -462,6 +467,8 @@ depends-member:
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", "viewWillAppear"]
 - ["Ps23CustomStringConvertible", ""]
+- ["Vs10Dictionary", "init"]
+- !private ["Vs10Dictionary", "subscript"]
 - !private ["Ps28DictionaryLiteralConvertible", "Generator"]
 - !private ["Ps28DictionaryLiteralConvertible", "Index"]
 - !private ["Ps28DictionaryLiteralConvertible", "SubSequence"]
@@ -494,12 +501,13 @@ depends-member:
 - !private ["Ps9Equatable", "NSTextAlignment"]
 - !private ["Ps9Equatable", "Normal"]
 - !private ["Ps9Equatable", "Right"]
+- ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "SubSequence"]
 - !private ["Ps9Equatable", "TEXT"]
 - !private ["Ps9Equatable", "UIButton"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UIFont"]
-- !private ["Ps9Equatable", "UIImage"]
+- ["Ps9Equatable", "UIImage"]
 - !private ["Ps9Equatable", "UIImageView"]
 - !private ["Ps9Equatable", "UILabel"]
 - !private ["Ps9Equatable", "UIScreen"]
@@ -618,11 +626,12 @@ depends-member:
 - !private ["Ps8Hashable", "NSRegularExpression"]
 - !private ["Ps8Hashable", "NSTextAlignment"]
 - !private ["Ps8Hashable", "Right"]
+- ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "TEXT"]
 - !private ["Ps8Hashable", "UIButton"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UIFont"]
-- !private ["Ps8Hashable", "UIImage"]
+- ["Ps8Hashable", "UIImage"]
 - !private ["Ps8Hashable", "UIImageView"]
 - !private ["Ps8Hashable", "UILabel"]
 - !private ["Ps8Hashable", "UIScreen"]
@@ -695,6 +704,7 @@ depends-member:
 - !private ["Ps9Indexable", "exists"]
 - !private ["Ps9Indexable", "first"]
 - !private ["Ps9Indexable", "floatValue"]
+- ["Ps9Indexable", "init"]
 - !private ["Ps9Indexable", "map"]
 - !private ["Ps9Indexable", "stringValue"]
 - !private ["Ps9Indexable", "subscript"]
@@ -766,10 +776,11 @@ depends-member:
 - ["PSo8NSCoding", "NSMutableDictionary"]
 - !private ["PSo8NSCoding", "NSRegularExpression"]
 - !private ["PSo8NSCoding", "NSTextAlignment"]
+- ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "UIButton"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIFont"]
-- !private ["PSo8NSCoding", "UIImage"]
+- ["PSo8NSCoding", "UIImage"]
 - !private ["PSo8NSCoding", "UIImageView"]
 - !private ["PSo8NSCoding", "UILabel"]
 - !private ["PSo8NSCoding", "UIScreen"]
@@ -845,10 +856,11 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "NSMutableDictionary"]
 - !private ["PSo26NSExtensionRequestHandling", "NSRegularExpression"]
 - !private ["PSo26NSExtensionRequestHandling", "NSTextAlignment"]
+- ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "UIButton"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UIFont"]
-- !private ["PSo26NSExtensionRequestHandling", "UIImage"]
+- ["PSo26NSExtensionRequestHandling", "UIImage"]
 - !private ["PSo26NSExtensionRequestHandling", "UIImageView"]
 - !private ["PSo26NSExtensionRequestHandling", "UILabel"]
 - !private ["PSo26NSExtensionRequestHandling", "UIScreen"]
@@ -907,7 +919,7 @@ depends-member:
 - !private ["CSo8NSObject", "UIButton"]
 - !private ["CSo8NSObject", "UIColor"]
 - !private ["CSo8NSObject", "UIFont"]
-- !private ["CSo8NSObject", "UIImage"]
+- ["CSo8NSObject", "UIImage"]
 - !private ["CSo8NSObject", "UIImageView"]
 - !private ["CSo8NSObject", "UILabel"]
 - !private ["CSo8NSObject", "UIScreen"]
@@ -980,10 +992,11 @@ depends-member:
 - ["PSo16NSObjectProtocol", "NSMutableDictionary"]
 - !private ["PSo16NSObjectProtocol", "NSRegularExpression"]
 - !private ["PSo16NSObjectProtocol", "NSTextAlignment"]
+- ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "UIButton"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIFont"]
-- !private ["PSo16NSObjectProtocol", "UIImage"]
+- ["PSo16NSObjectProtocol", "UIImage"]
 - !private ["PSo16NSObjectProtocol", "UIImageView"]
 - !private ["PSo16NSObjectProtocol", "UILabel"]
 - !private ["PSo16NSObjectProtocol", "UIScreen"]
@@ -1180,7 +1193,7 @@ depends-member:
 - !private ["C16Trivia_Challenge18TemplateController", "UIButton"]
 - !private ["C16Trivia_Challenge18TemplateController", "UIColor"]
 - !private ["C16Trivia_Challenge18TemplateController", "UIFont"]
-- !private ["C16Trivia_Challenge18TemplateController", "UIImage"]
+- ["C16Trivia_Challenge18TemplateController", "UIImage"]
 - !private ["C16Trivia_Challenge18TemplateController", "UIImageView"]
 - !private ["C16Trivia_Challenge18TemplateController", "UILabel"]
 - !private ["C16Trivia_Challenge18TemplateController", "UIScreen"]
@@ -1244,10 +1257,11 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "NSMutableDictionary"]
 - !private ["PSo21UIAppearanceContainer", "NSRegularExpression"]
 - !private ["PSo21UIAppearanceContainer", "NSTextAlignment"]
+- ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "UIButton"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UIFont"]
-- !private ["PSo21UIAppearanceContainer", "UIImage"]
+- ["PSo21UIAppearanceContainer", "UIImage"]
 - !private ["PSo21UIAppearanceContainer", "UIImageView"]
 - !private ["PSo21UIAppearanceContainer", "UILabel"]
 - !private ["PSo21UIAppearanceContainer", "UIScreen"]
@@ -1307,10 +1321,11 @@ depends-member:
 - ["PSo18UIContentContainer", "NSMutableDictionary"]
 - !private ["PSo18UIContentContainer", "NSRegularExpression"]
 - !private ["PSo18UIContentContainer", "NSTextAlignment"]
+- ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "UIButton"]
 - !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UIFont"]
-- !private ["PSo18UIContentContainer", "UIImage"]
+- ["PSo18UIContentContainer", "UIImage"]
 - !private ["PSo18UIContentContainer", "UIImageView"]
 - !private ["PSo18UIContentContainer", "UILabel"]
 - !private ["PSo18UIContentContainer", "UIScreen"]
@@ -1389,10 +1404,11 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "NSMutableDictionary"]
 - !private ["PSo18UIFocusEnvironment", "NSRegularExpression"]
 - !private ["PSo18UIFocusEnvironment", "NSTextAlignment"]
+- ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "UIButton"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UIFont"]
-- !private ["PSo18UIFocusEnvironment", "UIImage"]
+- ["PSo18UIFocusEnvironment", "UIImage"]
 - !private ["PSo18UIFocusEnvironment", "UIImageView"]
 - !private ["PSo18UIFocusEnvironment", "UILabel"]
 - !private ["PSo18UIFocusEnvironment", "UIScreen"]
@@ -1472,7 +1488,7 @@ depends-member:
 - !private ["CSo11UIResponder", "UIButton"]
 - !private ["CSo11UIResponder", "UIColor"]
 - !private ["CSo11UIResponder", "UIFont"]
-- !private ["CSo11UIResponder", "UIImage"]
+- ["CSo11UIResponder", "UIImage"]
 - !private ["CSo11UIResponder", "UIImageView"]
 - !private ["CSo11UIResponder", "UILabel"]
 - !private ["CSo11UIResponder", "UIScreen"]
@@ -1526,10 +1542,11 @@ depends-member:
 - ["PSo16UIStateRestoring", "NSMutableDictionary"]
 - !private ["PSo16UIStateRestoring", "NSRegularExpression"]
 - !private ["PSo16UIStateRestoring", "NSTextAlignment"]
+- ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "UIButton"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UIFont"]
-- !private ["PSo16UIStateRestoring", "UIImage"]
+- ["PSo16UIStateRestoring", "UIImage"]
 - !private ["PSo16UIStateRestoring", "UIImageView"]
 - !private ["PSo16UIStateRestoring", "UILabel"]
 - !private ["PSo16UIStateRestoring", "UIScreen"]
@@ -1589,10 +1606,11 @@ depends-member:
 - ["PSo18UITraitEnvironment", "NSMutableDictionary"]
 - !private ["PSo18UITraitEnvironment", "NSRegularExpression"]
 - !private ["PSo18UITraitEnvironment", "NSTextAlignment"]
+- ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "UIButton"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UIFont"]
-- !private ["PSo18UITraitEnvironment", "UIImage"]
+- ["PSo18UITraitEnvironment", "UIImage"]
 - !private ["PSo18UITraitEnvironment", "UIImageView"]
 - !private ["PSo18UITraitEnvironment", "UILabel"]
 - !private ["PSo18UITraitEnvironment", "UIScreen"]
@@ -1667,7 +1685,7 @@ depends-member:
 - !private ["CSo16UIViewController", "UIButton"]
 - !private ["CSo16UIViewController", "UIColor"]
 - !private ["CSo16UIViewController", "UIFont"]
-- !private ["CSo16UIViewController", "UIImage"]
+- ["CSo16UIViewController", "UIImage"]
 - !private ["CSo16UIViewController", "UIImageView"]
 - !private ["CSo16UIViewController", "UILabel"]
 - !private ["CSo16UIViewController", "UIScreen"]
@@ -1764,9 +1782,10 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "first"]
-- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "map"]
 - !private ["Ps21_ObjectiveCBridgeable", "stringByReplacingOccurrencesOfString"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 - !private ["Ps22_RandomAccessAmbiguity", "Distance"]
 - !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
@@ -1818,10 +1837,11 @@ depends-nominal:
 - !private "VSC7CGPoint"
 - "Ps11CVarArgType"
 - !private "Vs9Character"
-- !private "Ps14CollectionType"
+- "Ps14CollectionType"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
+- "Vs10Dictionary"
 - "Ps28DictionaryLiteralConvertible"
 - !private "Sd"
 - "Ps9Equatable"
@@ -1835,7 +1855,7 @@ depends-nominal:
 - !private "Ps13GeneratorType"
 - "Ps8Hashable"
 - !private "SQ"
-- !private "Ps9Indexable"
+- "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
 - !private "Si"
 - !private "Vs5Int16"
@@ -1941,7 +1961,7 @@ depends-nominal:
 - !private "Ps14_Incrementable"
 - !private "Ps22_IntegerArithmeticType"
 - !private "Ps12_IntegerType"
-- !private "Ps21_ObjectiveCBridgeable"
+- "Ps21_ObjectiveCBridgeable"
 - !private "Vs26_OptionalNilComparisonType"
 - !private "Ps22_RandomAccessAmbiguity"
 - "Ps12_Reflectable"
@@ -1968,4 +1988,4 @@ depends-external:
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "dbdcf123cf258595699a5e8d911b5c04"
+interface-hash: "e6afe7fcdef69a557d3974b94d669c7b"

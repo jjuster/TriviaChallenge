@@ -11,9 +11,9 @@ provides-dynamic-lookup:
 - "setupButtons"
 depends-top-level:
 - "TemplateController"
-- !private "StringLiteralType"
 - !private "UIButton"
 - "String"
+- !private "StringLiteralType"
 - "ResultsController"
 - !private "!="
 depends-member:

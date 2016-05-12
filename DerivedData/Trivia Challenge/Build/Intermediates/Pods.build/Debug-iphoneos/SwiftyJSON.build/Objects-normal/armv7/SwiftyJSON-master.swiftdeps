@@ -1,5 +1,5 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "00804ba19b4c23d7040a3ac69b423dba"
-build_time: [516335774, 508305000]
+build_time: [516339314, 63764000]
 inputs:
   "/Users/joshjuster/projects/Trivia Challenge/Pods/SwiftyJSON/Source/SwiftyJSON.swift": [516221818, 0]

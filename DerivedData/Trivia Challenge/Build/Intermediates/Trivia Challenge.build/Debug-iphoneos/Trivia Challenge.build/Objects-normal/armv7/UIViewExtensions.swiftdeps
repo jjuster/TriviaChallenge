@@ -17,38 +17,38 @@ provides-member:
 - ["CSo6UIView", "addConstraintCenterY"]
 - ["CSo6UIView", "addConstraintAspectRatio"]
 provides-dynamic-lookup:
-- "constraintWidth"
-- "addConstraintBottomMargin"
 - "show"
-- "addConstraintHeight"
-- "constraintFormat"
 - "addConstraintCenterY"
+- "addConstraintBottomMargin"
 - "addConstraintFormat"
+- "constraintWidth"
+- "addConstraintHeight"
+- "addConstraintAspectRatio"
+- "addConstraintWidth"
+- "addConstraintRightLeftMargin"
+- "constraintHeight"
 - "addConstraintCenterX"
 - "hide"
-- "constraintHeight"
-- "addConstraintRightLeftMargin"
-- "addConstraintWidth"
-- "addConstraintAspectRatio"
+- "constraintFormat"
 depends-top-level:
-- !private "hideableUIViewConstraintsKey"
-- !private "??"
-- !private "==="
-- "AnyObject"
+- "String"
+- !private "NSLayoutFormatOptions"
+- !private "objc_getAssociatedObject"
 - "NSDictionary"
 - !private "=="
-- !private "||"
-- "UInt8"
-- "CGFloat"
 - "UIView"
-- !private "objc_setAssociatedObject"
-- !private "objc_getAssociatedObject"
-- !private "Array"
-- "NSLayoutConstraint"
-- "String"
+- "AnyObject"
 - !private "objc_AssociationPolicy"
-- !private "NSLayoutFormatOptions"
+- "UInt8"
+- "NSLayoutConstraint"
+- !private "||"
+- !private "objc_setAssociatedObject"
+- !private "??"
+- !private "==="
+- !private "hideableUIViewConstraintsKey"
+- !private "Array"
 - !private "BooleanLiteralType"
+- "CGFloat"
 depends-member:
 - !private ["Ps9AnyObject", "NSLayoutConstraint"]
 - !private ["Ps9AnyObject", "NSLayoutFormatOptions"]
@@ -339,6 +339,8 @@ depends-member:
 - !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps11IntegerType", "Distance"]
 - !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["P10SwiftyJSON17JSONSubscriptType", "Distance"]
+- !private ["P10SwiftyJSON17JSONSubscriptType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "Distance"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
 - !private ["Ps21MutableCollectionType", "Element"]
@@ -774,6 +776,7 @@ depends-nominal:
 - !private "Ps21IntegerArithmeticType"
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
+- !private "P10SwiftyJSON17JSONSubscriptType"
 - !private "Ps14MirrorPathType"
 - !private "Ps21MutableCollectionType"
 - !private "Ps16MutableIndexable"
@@ -829,5 +832,15 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/arm.swiftmodule"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/EZLoadingActivity/EZLoadingActivity.framework/Modules/EZLoadingActivity.swiftmodule/arm.swiftmodule"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/EZLoadingActivity/EZLoadingActivity.framework/Headers/EZLoadingActivity-Swift.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/EZLoadingActivity/EZLoadingActivity.framework/Headers/EZLoadingActivity-umbrella.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/EZLoadingActivity/EZLoadingActivity.framework/Modules/module.modulemap"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm.swiftmodule"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
 interface-hash: "33511b52cf2abcebcf4462d9b285ea64"
