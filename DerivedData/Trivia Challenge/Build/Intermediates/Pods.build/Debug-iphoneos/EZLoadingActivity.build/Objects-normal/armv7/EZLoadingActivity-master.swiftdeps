@@ -1,5 +1,0 @@
-version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
-options: "cf1a0a4c1d7a87f8bda4fd9aeb955190"
-build_time: [516339310, 181934000]
-inputs:
-  "/Users/joshjuster/projects/Trivia Challenge/Pods/EZLoadingActivity/EZLoadingActivity.swift": [516335846, 0]

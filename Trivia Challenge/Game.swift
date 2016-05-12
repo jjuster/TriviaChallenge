@@ -27,6 +27,8 @@ class Game : NSObject {
         switch(prop) {
             case "[numCorrect]":
                 return String(correctAnswers)
+            case "[questionNumber]":
+                return String(questionIndex)
             case "[questionCount]":
                 return String(numberQuestions!)
             case "[question]":

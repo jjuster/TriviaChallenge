@@ -1,6 +1,0 @@
-framework module Pods_Trivia_Challenge {
-  umbrella header "Pods-Trivia Challenge-umbrella.h"
-
-  export *
-  module * { export * }
-}

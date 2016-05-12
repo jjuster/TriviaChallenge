@@ -36,6 +36,7 @@ class AssetManager : NSObject {
         UnknownError     = 5,
         WriteError       = 6,
         ParseError       = 7,
+        MissingFile      = 8,
         NoError          = -1
     }
     
@@ -101,16 +102,22 @@ class AssetManager : NSObject {
                             let imageSource = objectJson["source"].stringValue
                             if (imageSource != "") {
                                 let imageUrl = NSURL(string: imageSource)
-                                let image = UIImage(data: NSData(contentsOfURL: imageUrl!)!)
-                                
-                                if let data = UIImagePNGRepresentation(image!) {
-                                    let fileURL = objectPath.URLByAppendingPathComponent("\(objectJson["title"].stringValue).png")
+                                let data = NSData(contentsOfURL: imageUrl!)
+                                if (data != nil) {
+                                    let image = UIImage(data: NSData(contentsOfURL: imageUrl!)!)
                                     
-                                    do {
-                                        try data.writeToURL(fileURL, options: .AtomicWrite)
-                                    } catch _ {
-                                        error = .WriteError
+                                    if let data = UIImagePNGRepresentation(image!) {
+                                        let fileURL = objectPath.URLByAppendingPathComponent("\(objectJson["title"].stringValue).png")
+                                        
+                                        do {
+                                            try data.writeToURL(fileURL, options: .AtomicWrite)
+                                        } catch _ {
+                                            error = .WriteError
+                                        }
                                     }
+                                } else {
+                                    print(imageUrl)
+                                    error = .MissingFile
                                 }
                             } else {
                                 error = .ParseError
@@ -192,7 +199,6 @@ class AssetManager : NSObject {
         }
         
         self.gameState!.randomizeQuestions = self.game!["randomize_questions"].boolValue
-        self.gameState!.randomizeQuestions = self.game!["randomize_answers"].boolValue
         self.gameState!.numberQuestions = self.game!["number_of_questions"].int
         self.gameState!.lowScoreMessage = self.game!["low_score_message"].stringValue
         self.gameState!.mediumScoreMessage = self.game!["medium_score_message"].stringValue
@@ -274,7 +280,7 @@ class AssetManager : NSObject {
     }
     
     func load(code: String, success: ((JSON) -> Void), failure: ((error: AssetManager.TriviaError) -> Void)) {
-        let url = "\(host)/assets/load?code=\(code)"
+        let url = "\(host)/assets/load?code=\(code.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))"
         print("URL:",url)
         Alamofire.request(.GET, url, encoding: .JSON)
             .responseJSON { response in                

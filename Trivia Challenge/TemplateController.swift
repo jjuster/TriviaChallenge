@@ -105,6 +105,7 @@ class TemplateController: UIViewController {
                     label.font = UIFont(name: "Gotham", size: CGFloat(size!))
                     label.textColor = color!
                     label.textAlignment = justification!
+                    label.adjustsFontSizeToFitWidth = true
                     
                     gameText = self.addGameState(text)
                     if (gameText != nil) {
@@ -191,6 +192,7 @@ class TemplateController: UIViewController {
                     button.titleLabel!.font = UIFont(name: "Gotham", size: CGFloat(size!))
                     button.titleLabel!.textColor = color!
                     button.contentVerticalAlignment = .Center
+                    button.titleLabel!.adjustsFontSizeToFitWidth = true
                     button.titleLabel!.textAlignment = justification!
                     
                     gameText = self.addGameState(text)
