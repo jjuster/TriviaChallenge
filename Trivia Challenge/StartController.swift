@@ -8,18 +8,10 @@
 import UIKit
 
 class StartController: TemplateController {
+    override var pageType: String { return "start" }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
-        self.pageType = "start"
-        
-        self.loadBackgroundColor()
-        self.loadImages()
-        self.loadInputs()
-        self.loadButtons()
-        self.loadText()
         
         self.setupButtons()
     }

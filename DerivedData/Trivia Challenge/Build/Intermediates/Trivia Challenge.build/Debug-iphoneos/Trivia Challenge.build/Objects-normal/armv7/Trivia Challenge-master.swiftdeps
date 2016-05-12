@@ -1,0 +1,16 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "3c958f45347eee9d0801c89671a18684"
+build_time: [516335778, 226481000]
+inputs:
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/SettingsController.swift": !dirty [516335671, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/CollectionExtensions.swift": !dirty [516317727, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/UIViewExtensions.swift": !dirty [516261547, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/StartController.swift": !dirty [516333720, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/ResultsController.swift": !dirty [516333662, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/AssetManager.swift": !dirty [516335514, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/Game.swift": !dirty [516324816, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/TemplateController.swift": !dirty [516335739, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/AppDelegate.swift": !dirty [516330895, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/QuestionsController.swift": !dirty [516333726, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/Question.swift": !dirty [516315065, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Trivia Challenge/UIColorExtensions.swift": !dirty [516292764, 0]

@@ -6,17 +6,17 @@ provides-member:
 - ["CSo7UIColor", "init"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NSCharacterSet"
-- !private "NSScanner"
-- !private "UnicodeScalarType"
 - !private "UInt32"
+- "UIColor"
+- !private "NSCharacterSet"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
 - !private "CGFloat"
 - !private ">>"
-- !private "StringLiteralType"
-- !private "&"
-- "UIColor"
-- "String"
 - !private "/"
+- !private "NSScanner"
+- !private "&"
+- "String"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CGFloat"]
@@ -386,6 +386,10 @@ depends-external:
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Modules/EZLoadingActivity.swiftmodule/i386.swiftmodule"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Headers/EZLoadingActivity-Swift.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Headers/EZLoadingActivity-umbrella.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Modules/module.modulemap"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/i386.swiftmodule"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"

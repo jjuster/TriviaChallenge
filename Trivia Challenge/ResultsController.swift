@@ -8,17 +8,19 @@
 import UIKit
 
 class ResultsController: TemplateController {
+    override var pageType: String { return "results" }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.pageType = "results"
-        
-        self.loadBackgroundColor()
-        self.loadImages()
-        self.loadInputs()
-        self.loadButtons()
-        self.loadText()
+                
+        self.setupButtons()
+    }
+    
+    func setupButtons() {
+        if (self.viewDictionary["start_over_button"] != nil) {
+            let startOverButton : UIButton = self.viewDictionary["start_over_button"] as! UIButton
+            startOverButton.addTarget(self, action: #selector(self.restart), forControlEvents: .TouchUpInside)
+        }
     }
 }
 

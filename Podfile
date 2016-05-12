@@ -6,6 +6,7 @@ use_frameworks!
 def app_pods  
   pod 'Alamofire', '~> 3.0'
   pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+  pod 'EZLoadingActivity'
 end
 
 target :'Trivia Challenge' do

@@ -7,201 +7,262 @@ provides-member:
 - ["C16Trivia_Challenge17ResultsController", ""]
 provides-dynamic-lookup:
 - "viewDidLoad"
+- "pageType"
+- "setupButtons"
 depends-top-level:
-- "ResultsController"
 - "TemplateController"
 - !private "StringLiteralType"
+- !private "UIButton"
+- "String"
+- "ResultsController"
+- !private "!="
 depends-member:
+- !private ["Ps9AnyObject", "addTarget"]
+- !private ["Ps9AnyObject", "deinit"]
 - ["Ps9AnyObject", "init"]
-- !private ["Ps9AnyObject", "loadBackgroundColor"]
-- !private ["Ps9AnyObject", "loadButtons"]
-- !private ["Ps9AnyObject", "loadImages"]
-- !private ["Ps9AnyObject", "loadInputs"]
-- !private ["Ps9AnyObject", "loadText"]
-- !private ["Ps9AnyObject", "pageType"]
+- ["Ps9AnyObject", "pageType"]
+- !private ["Ps9AnyObject", "restart"]
+- ["Ps9AnyObject", "setupButtons"]
+- !private ["Ps9AnyObject", "subscript"]
+- !private ["Ps9AnyObject", "viewDictionary"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
+- !private ["Ps23ArrayLiteralConvertible", "TouchUpInside"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "addTarget"]
 - ["Ps11CVarArgType", "init"]
-- !private ["Ps11CVarArgType", "loadBackgroundColor"]
-- !private ["Ps11CVarArgType", "loadButtons"]
-- !private ["Ps11CVarArgType", "loadImages"]
-- !private ["Ps11CVarArgType", "loadInputs"]
-- !private ["Ps11CVarArgType", "loadText"]
-- !private ["Ps11CVarArgType", "pageType"]
+- ["Ps11CVarArgType", "pageType"]
+- !private ["Ps11CVarArgType", "restart"]
+- ["Ps11CVarArgType", "setupButtons"]
+- !private ["Ps11CVarArgType", "subscript"]
+- !private ["Ps11CVarArgType", "viewDictionary"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", ""]
+- !private ["Ps28CustomDebugStringConvertible", "addTarget"]
 - ["Ps28CustomDebugStringConvertible", "init"]
-- !private ["Ps28CustomDebugStringConvertible", "loadBackgroundColor"]
-- !private ["Ps28CustomDebugStringConvertible", "loadButtons"]
-- !private ["Ps28CustomDebugStringConvertible", "loadImages"]
-- !private ["Ps28CustomDebugStringConvertible", "loadInputs"]
-- !private ["Ps28CustomDebugStringConvertible", "loadText"]
-- !private ["Ps28CustomDebugStringConvertible", "pageType"]
+- ["Ps28CustomDebugStringConvertible", "pageType"]
+- !private ["Ps28CustomDebugStringConvertible", "restart"]
+- ["Ps28CustomDebugStringConvertible", "setupButtons"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDictionary"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addTarget"]
 - ["Ps23CustomStringConvertible", "init"]
-- !private ["Ps23CustomStringConvertible", "loadBackgroundColor"]
-- !private ["Ps23CustomStringConvertible", "loadButtons"]
-- !private ["Ps23CustomStringConvertible", "loadImages"]
-- !private ["Ps23CustomStringConvertible", "loadInputs"]
-- !private ["Ps23CustomStringConvertible", "loadText"]
-- !private ["Ps23CustomStringConvertible", "pageType"]
+- ["Ps23CustomStringConvertible", "pageType"]
+- !private ["Ps23CustomStringConvertible", "restart"]
+- ["Ps23CustomStringConvertible", "setupButtons"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "viewDictionary"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Ps9Equatable", "TouchUpInside"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addTarget"]
 - ["Ps9Equatable", "init"]
-- !private ["Ps9Equatable", "loadBackgroundColor"]
-- !private ["Ps9Equatable", "loadButtons"]
-- !private ["Ps9Equatable", "loadImages"]
-- !private ["Ps9Equatable", "loadInputs"]
-- !private ["Ps9Equatable", "loadText"]
-- !private ["Ps9Equatable", "pageType"]
+- ["Ps9Equatable", "pageType"]
+- !private ["Ps9Equatable", "restart"]
+- ["Ps9Equatable", "setupButtons"]
+- !private ["Ps9Equatable", "subscript"]
+- !private ["Ps9Equatable", "viewDictionary"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addTarget"]
 - ["Ps8Hashable", "init"]
-- !private ["Ps8Hashable", "loadBackgroundColor"]
-- !private ["Ps8Hashable", "loadButtons"]
-- !private ["Ps8Hashable", "loadImages"]
-- !private ["Ps8Hashable", "loadInputs"]
-- !private ["Ps8Hashable", "loadText"]
-- !private ["Ps8Hashable", "pageType"]
+- ["Ps8Hashable", "pageType"]
+- !private ["Ps8Hashable", "restart"]
+- ["Ps8Hashable", "setupButtons"]
+- !private ["Ps8Hashable", "subscript"]
+- !private ["Ps8Hashable", "viewDictionary"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
+- !private ["PSo8NSCoding", "addTarget"]
 - ["PSo8NSCoding", "init"]
-- !private ["PSo8NSCoding", "loadBackgroundColor"]
-- !private ["PSo8NSCoding", "loadButtons"]
-- !private ["PSo8NSCoding", "loadImages"]
-- !private ["PSo8NSCoding", "loadInputs"]
-- !private ["PSo8NSCoding", "loadText"]
-- !private ["PSo8NSCoding", "pageType"]
+- ["PSo8NSCoding", "pageType"]
+- !private ["PSo8NSCoding", "restart"]
+- ["PSo8NSCoding", "setupButtons"]
+- !private ["PSo8NSCoding", "subscript"]
+- !private ["PSo8NSCoding", "viewDictionary"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "deinit"]
+- !private ["PSo9NSCopying", "subscript"]
+- !private ["CSo12NSDictionary", "subscript"]
 - ["PSo26NSExtensionRequestHandling", "init"]
-- !private ["PSo26NSExtensionRequestHandling", "loadBackgroundColor"]
-- !private ["PSo26NSExtensionRequestHandling", "loadButtons"]
-- !private ["PSo26NSExtensionRequestHandling", "loadImages"]
-- !private ["PSo26NSExtensionRequestHandling", "loadInputs"]
-- !private ["PSo26NSExtensionRequestHandling", "loadText"]
-- !private ["PSo26NSExtensionRequestHandling", "pageType"]
+- ["PSo26NSExtensionRequestHandling", "pageType"]
+- !private ["PSo26NSExtensionRequestHandling", "restart"]
+- ["PSo26NSExtensionRequestHandling", "setupButtons"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDictionary"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo17NSFastEnumeration", "subscript"]
+- !private ["PSo16NSMutableCopying", "subscript"]
+- !private ["CSo19NSMutableDictionary", "subscript"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "UIButton"]
+- !private ["CSo8NSObject", "addTarget"]
 - ["CSo8NSObject", "init"]
-- !private ["CSo8NSObject", "loadBackgroundColor"]
-- !private ["CSo8NSObject", "loadButtons"]
-- !private ["CSo8NSObject", "loadImages"]
-- !private ["CSo8NSObject", "loadInputs"]
-- !private ["CSo8NSObject", "loadText"]
-- !private ["CSo8NSObject", "pageType"]
+- ["CSo8NSObject", "pageType"]
+- !private ["CSo8NSObject", "restart"]
+- ["CSo8NSObject", "setupButtons"]
+- !private ["CSo8NSObject", "subscript"]
+- !private ["CSo8NSObject", "viewDictionary"]
 - ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "addTarget"]
 - ["PSo16NSObjectProtocol", "init"]
-- !private ["PSo16NSObjectProtocol", "loadBackgroundColor"]
-- !private ["PSo16NSObjectProtocol", "loadButtons"]
-- !private ["PSo16NSObjectProtocol", "loadImages"]
-- !private ["PSo16NSObjectProtocol", "loadInputs"]
-- !private ["PSo16NSObjectProtocol", "loadText"]
-- !private ["PSo16NSObjectProtocol", "pageType"]
+- ["PSo16NSObjectProtocol", "pageType"]
+- !private ["PSo16NSObjectProtocol", "restart"]
+- ["PSo16NSObjectProtocol", "setupButtons"]
+- !private ["PSo16NSObjectProtocol", "subscript"]
+- !private ["PSo16NSObjectProtocol", "viewDictionary"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "subscript"]
+- !private ["Ps13OptionSetType", "TouchUpInside"]
 - !private ["Sq", "deinit"]
+- !private ["Ps16RawRepresentable", "TouchUpInside"]
+- ["C16Trivia_Challenge17ResultsController", "String"]
+- !private ["C16Trivia_Challenge17ResultsController", "UIButton"]
 - ["C16Trivia_Challenge17ResultsController", "deinit"]
 - ["C16Trivia_Challenge17ResultsController", "init"]
-- !private ["C16Trivia_Challenge17ResultsController", "loadBackgroundColor"]
-- !private ["C16Trivia_Challenge17ResultsController", "loadButtons"]
-- !private ["C16Trivia_Challenge17ResultsController", "loadImages"]
-- !private ["C16Trivia_Challenge17ResultsController", "loadInputs"]
-- !private ["C16Trivia_Challenge17ResultsController", "loadText"]
-- !private ["C16Trivia_Challenge17ResultsController", "pageType"]
+- ["C16Trivia_Challenge17ResultsController", "pageType"]
+- !private ["C16Trivia_Challenge17ResultsController", "restart"]
+- ["C16Trivia_Challenge17ResultsController", "setupButtons"]
+- !private ["C16Trivia_Challenge17ResultsController", "viewDictionary"]
 - ["C16Trivia_Challenge17ResultsController", "viewDidLoad"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Ps14SetAlgebraType", "TouchUpInside"]
+- !private ["SS", "deinit"]
+- ["C16Trivia_Challenge18TemplateController", "String"]
+- !private ["C16Trivia_Challenge18TemplateController", "UIButton"]
 - ["C16Trivia_Challenge18TemplateController", "init"]
-- !private ["C16Trivia_Challenge18TemplateController", "loadBackgroundColor"]
-- !private ["C16Trivia_Challenge18TemplateController", "loadButtons"]
-- !private ["C16Trivia_Challenge18TemplateController", "loadImages"]
-- !private ["C16Trivia_Challenge18TemplateController", "loadInputs"]
-- !private ["C16Trivia_Challenge18TemplateController", "loadText"]
-- !private ["C16Trivia_Challenge18TemplateController", "pageType"]
+- ["C16Trivia_Challenge18TemplateController", "pageType"]
+- !private ["C16Trivia_Challenge18TemplateController", "restart"]
+- ["C16Trivia_Challenge18TemplateController", "setupButtons"]
+- !private ["C16Trivia_Challenge18TemplateController", "viewDictionary"]
 - ["C16Trivia_Challenge18TemplateController", "viewDidLoad"]
 - ["C16Trivia_Challenge18TemplateController", ""]
+- !private ["PSo29UIAccessibilityIdentification", "addTarget"]
+- !private ["PSo12UIAppearance", "addTarget"]
+- !private ["PSo21UIAppearanceContainer", "addTarget"]
 - ["PSo21UIAppearanceContainer", "init"]
-- !private ["PSo21UIAppearanceContainer", "loadBackgroundColor"]
-- !private ["PSo21UIAppearanceContainer", "loadButtons"]
-- !private ["PSo21UIAppearanceContainer", "loadImages"]
-- !private ["PSo21UIAppearanceContainer", "loadInputs"]
-- !private ["PSo21UIAppearanceContainer", "loadText"]
-- !private ["PSo21UIAppearanceContainer", "pageType"]
+- ["PSo21UIAppearanceContainer", "pageType"]
+- !private ["PSo21UIAppearanceContainer", "restart"]
+- ["PSo21UIAppearanceContainer", "setupButtons"]
+- !private ["PSo21UIAppearanceContainer", "viewDictionary"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo8UIButton", "addTarget"]
 - ["PSo18UIContentContainer", "init"]
-- !private ["PSo18UIContentContainer", "loadBackgroundColor"]
-- !private ["PSo18UIContentContainer", "loadButtons"]
-- !private ["PSo18UIContentContainer", "loadImages"]
-- !private ["PSo18UIContentContainer", "loadInputs"]
-- !private ["PSo18UIContentContainer", "loadText"]
-- !private ["PSo18UIContentContainer", "pageType"]
+- ["PSo18UIContentContainer", "pageType"]
+- !private ["PSo18UIContentContainer", "restart"]
+- ["PSo18UIContentContainer", "setupButtons"]
+- !private ["PSo18UIContentContainer", "viewDictionary"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
+- !private ["CSo9UIControl", "addTarget"]
+- !private ["VSC15UIControlEvents", "TouchUpInside"]
+- !private ["PSo17UICoordinateSpace", "addTarget"]
+- !private ["PSo13UIDynamicItem", "addTarget"]
+- !private ["PSo18UIFocusEnvironment", "addTarget"]
 - ["PSo18UIFocusEnvironment", "init"]
-- !private ["PSo18UIFocusEnvironment", "loadBackgroundColor"]
-- !private ["PSo18UIFocusEnvironment", "loadButtons"]
-- !private ["PSo18UIFocusEnvironment", "loadImages"]
-- !private ["PSo18UIFocusEnvironment", "loadInputs"]
-- !private ["PSo18UIFocusEnvironment", "loadText"]
-- !private ["PSo18UIFocusEnvironment", "pageType"]
+- ["PSo18UIFocusEnvironment", "pageType"]
+- !private ["PSo18UIFocusEnvironment", "restart"]
+- ["PSo18UIFocusEnvironment", "setupButtons"]
+- !private ["PSo18UIFocusEnvironment", "viewDictionary"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "String"]
+- !private ["CSo11UIResponder", "UIButton"]
+- !private ["CSo11UIResponder", "addTarget"]
 - ["CSo11UIResponder", "init"]
-- !private ["CSo11UIResponder", "loadBackgroundColor"]
-- !private ["CSo11UIResponder", "loadButtons"]
-- !private ["CSo11UIResponder", "loadImages"]
-- !private ["CSo11UIResponder", "loadInputs"]
-- !private ["CSo11UIResponder", "loadText"]
-- !private ["CSo11UIResponder", "pageType"]
+- ["CSo11UIResponder", "pageType"]
+- !private ["CSo11UIResponder", "restart"]
+- ["CSo11UIResponder", "setupButtons"]
+- !private ["CSo11UIResponder", "viewDictionary"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "init"]
-- !private ["PSo16UIStateRestoring", "loadBackgroundColor"]
-- !private ["PSo16UIStateRestoring", "loadButtons"]
-- !private ["PSo16UIStateRestoring", "loadImages"]
-- !private ["PSo16UIStateRestoring", "loadInputs"]
-- !private ["PSo16UIStateRestoring", "loadText"]
-- !private ["PSo16UIStateRestoring", "pageType"]
+- ["PSo16UIStateRestoring", "pageType"]
+- !private ["PSo16UIStateRestoring", "restart"]
+- ["PSo16UIStateRestoring", "setupButtons"]
+- !private ["PSo16UIStateRestoring", "viewDictionary"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "addTarget"]
 - ["PSo18UITraitEnvironment", "init"]
-- !private ["PSo18UITraitEnvironment", "loadBackgroundColor"]
-- !private ["PSo18UITraitEnvironment", "loadButtons"]
-- !private ["PSo18UITraitEnvironment", "loadImages"]
-- !private ["PSo18UITraitEnvironment", "loadInputs"]
-- !private ["PSo18UITraitEnvironment", "loadText"]
-- !private ["PSo18UITraitEnvironment", "pageType"]
+- ["PSo18UITraitEnvironment", "pageType"]
+- !private ["PSo18UITraitEnvironment", "restart"]
+- ["PSo18UITraitEnvironment", "setupButtons"]
+- !private ["PSo18UITraitEnvironment", "viewDictionary"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "addTarget"]
+- ["CSo16UIViewController", "String"]
+- !private ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "init"]
-- !private ["CSo16UIViewController", "loadBackgroundColor"]
-- !private ["CSo16UIViewController", "loadButtons"]
-- !private ["CSo16UIViewController", "loadImages"]
-- !private ["CSo16UIViewController", "loadInputs"]
-- !private ["CSo16UIViewController", "loadText"]
-- !private ["CSo16UIViewController", "pageType"]
+- ["CSo16UIViewController", "pageType"]
+- !private ["CSo16UIViewController", "restart"]
+- ["CSo16UIViewController", "setupButtons"]
+- !private ["CSo16UIViewController", "viewDictionary"]
 - ["CSo16UIViewController", "viewDidLoad"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "addTarget"]
+- !private ["Ps12_Reflectable", "subscript"]
 depends-nominal:
 - "Ps9AnyObject"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
 - "Ps11CVarArgType"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
+- !private "Ps28DictionaryLiteralConvertible"
 - "Ps9Equatable"
 - "Ps8Hashable"
 - "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo12NSDictionary"
 - "PSo26NSExtensionRequestHandling"
+- !private "PSo17NSFastEnumeration"
+- !private "PSo16NSMutableCopying"
+- !private "CSo19NSMutableDictionary"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "Ps13OptionSetType"
 - !private "Sq"
+- !private "Ps16RawRepresentable"
 - "C16Trivia_Challenge17ResultsController"
+- !private "Ps12SequenceType"
+- !private "Ps14SetAlgebraType"
+- !private "SS"
 - "C16Trivia_Challenge18TemplateController"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
+- !private "CSo8UIButton"
 - "PSo18UIContentContainer"
+- !private "CSo9UIControl"
+- !private "VSC15UIControlEvents"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
 - "CSo11UIResponder"
 - "PSo16UIStateRestoring"
 - "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
@@ -216,8 +277,12 @@ depends-external:
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Modules/EZLoadingActivity.swiftmodule/i386.swiftmodule"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Headers/EZLoadingActivity-Swift.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Headers/EZLoadingActivity-umbrella.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Modules/module.modulemap"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/i386.swiftmodule"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "1e6bddf0c781b4b10906817f3abaa3cb"
+interface-hash: "9680ebb2d652d1dd478ff8ca42921d4d"

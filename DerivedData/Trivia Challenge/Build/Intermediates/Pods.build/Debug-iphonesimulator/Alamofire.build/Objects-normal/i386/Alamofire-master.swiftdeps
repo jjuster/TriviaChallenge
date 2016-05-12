@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "0a4863273b4553dd9cd7ca82752fbae8"
-build_time: [516322406, 903019000]
+build_time: [516337665, 802810000]
 inputs:
   "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Alamofire.swift": [516221819, 0]
   "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Download.swift": [516221819, 0]

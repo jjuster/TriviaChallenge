@@ -7,18 +7,13 @@
 
 import UIKit
 import SwiftyJSON
+import EZLoadingActivity
 
 class SettingsController: TemplateController {
+    override var pageType: String { return "settings" }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.pageType = "settings"
-        
-        self.loadBackgroundColor()
-        self.loadImages()
-        self.loadInputs()
-        self.loadButtons()
-        self.loadText()
         
         self.setupButtons()
     }
@@ -43,27 +38,30 @@ class SettingsController: TemplateController {
         
         let codeInput : UITextField = self.viewDictionary["code_input"] as! UITextField
         
+        EZLoadingActivity.Settings.SuccessText = "Game Loaded"
+        EZLoadingActivity.show("Loading Game", disableUI: true)
+        
         AssetManager.sharedInstance.load(codeInput.text!, success: { (game : JSON) in
             print("LOADED!")
             AssetManager.sharedInstance.saveGame(game, success: {
+                    EZLoadingActivity.hide(success: true, animated: true)
+                
                     dispatch_async(dispatch_get_main_queue()) {
-                        self.restart()
+                        self.restart()                        
                     }
                 }, failure: { (error) in
+                    EZLoadingActivity.Settings.FailText = "Save Failed"
+                    EZLoadingActivity.hide(success: false, animated: true)
             })
         }, failure: { (error) in
             print("ERROR", error)
             
             if (error == .InvalidCode) {
-                let alertController = UIAlertController(title: "Invalid Game Code", message: "Please try a new code (e.g. SPONSOR1)", preferredStyle: .Alert)
-                
-                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-                    alertController.dismissViewControllerAnimated(false, completion: nil)
-                }
-                alertController.addAction(OKAction)
-                
-                self.presentViewController(alertController, animated: true, completion: nil)
+                EZLoadingActivity.Settings.FailText = "Invalid Code"
+            } else {
+                EZLoadingActivity.Settings.FailText = "Load Failed"
             }
+            EZLoadingActivity.hide(success: false, animated: true)
         })
     }
 }

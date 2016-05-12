@@ -6,41 +6,47 @@ provides-nominal:
 provides-member:
 - ["C16Trivia_Challenge11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillEnterForeground"
-- "window"
+- "applicationWillResignActive"
+- "applicationWillTerminate"
 - "application"
 - "applicationDidEnterBackground"
-- "viewController"
-- "applicationWillTerminate"
-- "applicationWillResignActive"
+- "applicationWillEnterForeground"
+- "window"
 - "applicationDidBecomeActive"
 depends-top-level:
-- "AnyObject"
-- !private "print"
-- !private "SettingsController"
-- "UIResponder"
-- !private "AssetManager"
-- "UIApplicationDelegate"
-- !private "UINavigationController"
-- "UIViewController"
-- "Bool"
+- !private "StartController"
 - !private "UIScreen"
 - !private "StringLiteralType"
-- "AppDelegate"
+- !private "AssetManager"
 - !private "=="
 - "NSObject"
+- "UIWindow"
+- "AnyObject"
+- !private "SettingsController"
+- "UIApplicationDelegate"
+- !private "CATransition"
+- !private "UIColor"
+- !private "print"
+- "UIResponder"
+- "Bool"
+- !private "kCATransitionFade"
+- !private "UINavigationController"
 - !private "JSON"
 - "UIApplication"
+- "AppDelegate"
+- !private "EZLoadingActivity"
 - !private "BooleanLiteralType"
-- "UIWindow"
-- !private "StartController"
 depends-member:
 - !private ["Ps9AnyObject", "AssetManager"]
+- !private ["Ps9AnyObject", "CATransition"]
+- !private ["Ps9AnyObject", "EZLoadingActivity"]
 - !private ["Ps9AnyObject", "SettingsController"]
 - !private ["Ps9AnyObject", "StartController"]
+- !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UINavigationController"]
 - !private ["Ps9AnyObject", "UIScreen"]
 - !private ["Ps9AnyObject", "UIWindow"]
+- !private ["Ps9AnyObject", "addAnimation"]
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
 - ["Ps9AnyObject", "applicationDidEnterBackground"]
@@ -53,9 +59,13 @@ depends-member:
 - ["Ps9AnyObject", "applicationWillEnterForeground"]
 - ["Ps9AnyObject", "applicationWillResignActive"]
 - ["Ps9AnyObject", "applicationWillTerminate"]
+- !private ["Ps9AnyObject", "blackColor"]
 - !private ["Ps9AnyObject", "bounds"]
+- !private ["Ps9AnyObject", "duration"]
 - !private ["Ps9AnyObject", "gameCode"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "kCATransitionFade"]
+- !private ["Ps9AnyObject", "layer"]
 - !private ["Ps9AnyObject", "load"]
 - !private ["Ps9AnyObject", "loadGame"]
 - !private ["Ps9AnyObject", "mainScreen"]
@@ -67,20 +77,24 @@ depends-member:
 - !private ["Ps9AnyObject", "rootViewController"]
 - !private ["Ps9AnyObject", "saveGame"]
 - !private ["Ps9AnyObject", "sharedInstance"]
-- ["Ps9AnyObject", "viewController"]
+- !private ["Ps9AnyObject", "type"]
+- !private ["Ps9AnyObject", "view"]
+- !private ["Ps9AnyObject", "whiteColor"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
 - ["C16Trivia_Challenge11AppDelegate", "AnyObject"]
 - !private ["C16Trivia_Challenge11AppDelegate", "AssetManager"]
 - ["C16Trivia_Challenge11AppDelegate", "Bool"]
+- !private ["C16Trivia_Challenge11AppDelegate", "CATransition"]
+- !private ["C16Trivia_Challenge11AppDelegate", "EZLoadingActivity"]
 - !private ["C16Trivia_Challenge11AppDelegate", "JSON"]
 - ["C16Trivia_Challenge11AppDelegate", "NSObject"]
 - !private ["C16Trivia_Challenge11AppDelegate", "SettingsController"]
 - !private ["C16Trivia_Challenge11AppDelegate", "StartController"]
 - ["C16Trivia_Challenge11AppDelegate", "UIApplication"]
+- !private ["C16Trivia_Challenge11AppDelegate", "UIColor"]
 - !private ["C16Trivia_Challenge11AppDelegate", "UINavigationController"]
 - !private ["C16Trivia_Challenge11AppDelegate", "UIScreen"]
-- ["C16Trivia_Challenge11AppDelegate", "UIViewController"]
 - ["C16Trivia_Challenge11AppDelegate", "UIWindow"]
 - ["C16Trivia_Challenge11AppDelegate", "application"]
 - ["C16Trivia_Challenge11AppDelegate", "applicationDidBecomeActive"]
@@ -96,8 +110,8 @@ depends-member:
 - ["C16Trivia_Challenge11AppDelegate", "applicationWillTerminate"]
 - ["C16Trivia_Challenge11AppDelegate", "deinit"]
 - ["C16Trivia_Challenge11AppDelegate", "init"]
+- !private ["C16Trivia_Challenge11AppDelegate", "kCATransitionFade"]
 - !private ["C16Trivia_Challenge11AppDelegate", "print"]
-- ["C16Trivia_Challenge11AppDelegate", "viewController"]
 - ["C16Trivia_Challenge11AppDelegate", "window"]
 - !private ["C16Trivia_Challenge12AssetManager", "gameCode"]
 - !private ["C16Trivia_Challenge12AssetManager", "load"]
@@ -108,12 +122,30 @@ depends-member:
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["PSo8CAAction", "duration"]
+- !private ["PSo8CAAction", "init"]
+- !private ["PSo8CAAction", "type"]
+- !private ["CSo11CAAnimation", "duration"]
+- !private ["CSo11CAAnimation", "init"]
+- !private ["CSo11CAAnimation", "type"]
+- !private ["CSo7CALayer", "addAnimation"]
+- !private ["PSo13CAMediaTiming", "addAnimation"]
+- !private ["PSo13CAMediaTiming", "duration"]
+- !private ["PSo13CAMediaTiming", "init"]
+- !private ["PSo13CAMediaTiming", "type"]
+- !private ["CSo12CATransition", "duration"]
+- !private ["CSo12CATransition", "init"]
+- !private ["CSo12CATransition", "type"]
 - !private ["Ps11CVarArgType", "AssetManager"]
+- !private ["Ps11CVarArgType", "CATransition"]
+- !private ["Ps11CVarArgType", "EZLoadingActivity"]
 - !private ["Ps11CVarArgType", "SettingsController"]
 - !private ["Ps11CVarArgType", "StartController"]
+- !private ["Ps11CVarArgType", "UIColor"]
 - !private ["Ps11CVarArgType", "UINavigationController"]
 - !private ["Ps11CVarArgType", "UIScreen"]
 - !private ["Ps11CVarArgType", "UIWindow"]
+- !private ["Ps11CVarArgType", "addAnimation"]
 - ["Ps11CVarArgType", "application"]
 - ["Ps11CVarArgType", "applicationDidBecomeActive"]
 - ["Ps11CVarArgType", "applicationDidEnterBackground"]
@@ -126,9 +158,13 @@ depends-member:
 - ["Ps11CVarArgType", "applicationWillEnterForeground"]
 - ["Ps11CVarArgType", "applicationWillResignActive"]
 - ["Ps11CVarArgType", "applicationWillTerminate"]
+- !private ["Ps11CVarArgType", "blackColor"]
 - !private ["Ps11CVarArgType", "bounds"]
+- !private ["Ps11CVarArgType", "duration"]
 - !private ["Ps11CVarArgType", "gameCode"]
 - ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "kCATransitionFade"]
+- !private ["Ps11CVarArgType", "layer"]
 - !private ["Ps11CVarArgType", "load"]
 - !private ["Ps11CVarArgType", "loadGame"]
 - !private ["Ps11CVarArgType", "mainScreen"]
@@ -140,15 +176,21 @@ depends-member:
 - !private ["Ps11CVarArgType", "rootViewController"]
 - !private ["Ps11CVarArgType", "saveGame"]
 - !private ["Ps11CVarArgType", "sharedInstance"]
-- ["Ps11CVarArgType", "viewController"]
+- !private ["Ps11CVarArgType", "type"]
+- !private ["Ps11CVarArgType", "view"]
+- !private ["Ps11CVarArgType", "whiteColor"]
 - ["Ps11CVarArgType", "window"]
 - ["Ps11CVarArgType", ""]
 - !private ["Ps28CustomDebugStringConvertible", "AssetManager"]
+- !private ["Ps28CustomDebugStringConvertible", "CATransition"]
+- !private ["Ps28CustomDebugStringConvertible", "EZLoadingActivity"]
 - !private ["Ps28CustomDebugStringConvertible", "SettingsController"]
 - !private ["Ps28CustomDebugStringConvertible", "StartController"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UINavigationController"]
 - !private ["Ps28CustomDebugStringConvertible", "UIScreen"]
 - !private ["Ps28CustomDebugStringConvertible", "UIWindow"]
+- !private ["Ps28CustomDebugStringConvertible", "addAnimation"]
 - ["Ps28CustomDebugStringConvertible", "application"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidEnterBackground"]
@@ -161,9 +203,13 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillEnterForeground"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
+- !private ["Ps28CustomDebugStringConvertible", "blackColor"]
 - !private ["Ps28CustomDebugStringConvertible", "bounds"]
+- !private ["Ps28CustomDebugStringConvertible", "duration"]
 - !private ["Ps28CustomDebugStringConvertible", "gameCode"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "kCATransitionFade"]
+- !private ["Ps28CustomDebugStringConvertible", "layer"]
 - !private ["Ps28CustomDebugStringConvertible", "load"]
 - !private ["Ps28CustomDebugStringConvertible", "loadGame"]
 - !private ["Ps28CustomDebugStringConvertible", "mainScreen"]
@@ -175,16 +221,22 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "rootViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "saveGame"]
 - !private ["Ps28CustomDebugStringConvertible", "sharedInstance"]
-- ["Ps28CustomDebugStringConvertible", "viewController"]
+- !private ["Ps28CustomDebugStringConvertible", "type"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- !private ["Ps28CustomDebugStringConvertible", "whiteColor"]
 - ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "AssetManager"]
+- !private ["Ps23CustomStringConvertible", "CATransition"]
+- !private ["Ps23CustomStringConvertible", "EZLoadingActivity"]
 - !private ["Ps23CustomStringConvertible", "SettingsController"]
 - !private ["Ps23CustomStringConvertible", "StartController"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UINavigationController"]
 - !private ["Ps23CustomStringConvertible", "UIScreen"]
 - !private ["Ps23CustomStringConvertible", "UIWindow"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addAnimation"]
 - ["Ps23CustomStringConvertible", "application"]
 - ["Ps23CustomStringConvertible", "applicationDidBecomeActive"]
 - ["Ps23CustomStringConvertible", "applicationDidEnterBackground"]
@@ -197,9 +249,13 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillEnterForeground"]
 - ["Ps23CustomStringConvertible", "applicationWillResignActive"]
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
+- !private ["Ps23CustomStringConvertible", "blackColor"]
 - !private ["Ps23CustomStringConvertible", "bounds"]
+- !private ["Ps23CustomStringConvertible", "duration"]
 - !private ["Ps23CustomStringConvertible", "gameCode"]
 - ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "kCATransitionFade"]
+- !private ["Ps23CustomStringConvertible", "layer"]
 - !private ["Ps23CustomStringConvertible", "load"]
 - !private ["Ps23CustomStringConvertible", "loadGame"]
 - !private ["Ps23CustomStringConvertible", "mainScreen"]
@@ -211,16 +267,25 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "rootViewController"]
 - !private ["Ps23CustomStringConvertible", "saveGame"]
 - !private ["Ps23CustomStringConvertible", "sharedInstance"]
-- ["Ps23CustomStringConvertible", "viewController"]
+- !private ["Ps23CustomStringConvertible", "type"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- !private ["Ps23CustomStringConvertible", "whiteColor"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["V17EZLoadingActivity17EZLoadingActivity", "Settings"]
+- !private ["V17EZLoadingActivity17EZLoadingActivity", "hide"]
+- !private ["V17EZLoadingActivity17EZLoadingActivity", "show"]
 - !private ["Ps9Equatable", "AssetManager"]
+- !private ["Ps9Equatable", "CATransition"]
+- !private ["Ps9Equatable", "EZLoadingActivity"]
 - !private ["Ps9Equatable", "SettingsController"]
 - !private ["Ps9Equatable", "StartController"]
+- !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UINavigationController"]
 - !private ["Ps9Equatable", "UIScreen"]
 - !private ["Ps9Equatable", "UIWindow"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addAnimation"]
 - ["Ps9Equatable", "application"]
 - ["Ps9Equatable", "applicationDidBecomeActive"]
 - ["Ps9Equatable", "applicationDidEnterBackground"]
@@ -233,9 +298,13 @@ depends-member:
 - ["Ps9Equatable", "applicationWillEnterForeground"]
 - ["Ps9Equatable", "applicationWillResignActive"]
 - ["Ps9Equatable", "applicationWillTerminate"]
+- !private ["Ps9Equatable", "blackColor"]
 - !private ["Ps9Equatable", "bounds"]
+- !private ["Ps9Equatable", "duration"]
 - !private ["Ps9Equatable", "gameCode"]
 - ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "kCATransitionFade"]
+- !private ["Ps9Equatable", "layer"]
 - !private ["Ps9Equatable", "load"]
 - !private ["Ps9Equatable", "loadGame"]
 - !private ["Ps9Equatable", "mainScreen"]
@@ -247,16 +316,22 @@ depends-member:
 - !private ["Ps9Equatable", "rootViewController"]
 - !private ["Ps9Equatable", "saveGame"]
 - !private ["Ps9Equatable", "sharedInstance"]
-- ["Ps9Equatable", "viewController"]
+- !private ["Ps9Equatable", "type"]
+- !private ["Ps9Equatable", "view"]
+- !private ["Ps9Equatable", "whiteColor"]
 - ["Ps9Equatable", "window"]
 - ["Ps9Equatable", ""]
 - !private ["Ps8Hashable", "AssetManager"]
+- !private ["Ps8Hashable", "CATransition"]
+- !private ["Ps8Hashable", "EZLoadingActivity"]
 - !private ["Ps8Hashable", "SettingsController"]
 - !private ["Ps8Hashable", "StartController"]
+- !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UINavigationController"]
 - !private ["Ps8Hashable", "UIScreen"]
 - !private ["Ps8Hashable", "UIWindow"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addAnimation"]
 - ["Ps8Hashable", "application"]
 - ["Ps8Hashable", "applicationDidBecomeActive"]
 - ["Ps8Hashable", "applicationDidEnterBackground"]
@@ -269,9 +344,13 @@ depends-member:
 - ["Ps8Hashable", "applicationWillEnterForeground"]
 - ["Ps8Hashable", "applicationWillResignActive"]
 - ["Ps8Hashable", "applicationWillTerminate"]
+- !private ["Ps8Hashable", "blackColor"]
 - !private ["Ps8Hashable", "bounds"]
+- !private ["Ps8Hashable", "duration"]
 - !private ["Ps8Hashable", "gameCode"]
 - ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "kCATransitionFade"]
+- !private ["Ps8Hashable", "layer"]
 - !private ["Ps8Hashable", "load"]
 - !private ["Ps8Hashable", "loadGame"]
 - !private ["Ps8Hashable", "mainScreen"]
@@ -283,29 +362,47 @@ depends-member:
 - !private ["Ps8Hashable", "rootViewController"]
 - !private ["Ps8Hashable", "saveGame"]
 - !private ["Ps8Hashable", "sharedInstance"]
-- ["Ps8Hashable", "viewController"]
+- !private ["Ps8Hashable", "type"]
+- !private ["Ps8Hashable", "view"]
+- !private ["Ps8Hashable", "whiteColor"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
+- !private ["PSo8NSCoding", "addAnimation"]
+- !private ["PSo8NSCoding", "blackColor"]
+- !private ["PSo8NSCoding", "duration"]
 - !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "layer"]
 - !private ["PSo8NSCoding", "makeKeyAndVisible"]
 - !private ["PSo8NSCoding", "navigationBarHidden"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "rootViewController"]
+- !private ["PSo8NSCoding", "type"]
+- !private ["PSo8NSCoding", "view"]
+- !private ["PSo8NSCoding", "whiteColor"]
+- !private ["PSo9NSCopying", "blackColor"]
+- !private ["PSo9NSCopying", "duration"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "type"]
+- !private ["PSo9NSCopying", "whiteColor"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationBarHidden"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["CSo8NSObject", "AnyObject"]
 - !private ["CSo8NSObject", "AssetManager"]
 - ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "CATransition"]
+- !private ["CSo8NSObject", "EZLoadingActivity"]
 - !private ["CSo8NSObject", "JSON"]
 - ["CSo8NSObject", "NSObject"]
 - !private ["CSo8NSObject", "SettingsController"]
 - !private ["CSo8NSObject", "StartController"]
 - ["CSo8NSObject", "UIApplication"]
+- !private ["CSo8NSObject", "UIColor"]
 - !private ["CSo8NSObject", "UINavigationController"]
 - !private ["CSo8NSObject", "UIScreen"]
-- ["CSo8NSObject", "UIViewController"]
 - ["CSo8NSObject", "UIWindow"]
+- !private ["CSo8NSObject", "addAnimation"]
 - ["CSo8NSObject", "application"]
 - ["CSo8NSObject", "applicationDidBecomeActive"]
 - ["CSo8NSObject", "applicationDidEnterBackground"]
@@ -318,9 +415,13 @@ depends-member:
 - ["CSo8NSObject", "applicationWillEnterForeground"]
 - ["CSo8NSObject", "applicationWillResignActive"]
 - ["CSo8NSObject", "applicationWillTerminate"]
+- !private ["CSo8NSObject", "blackColor"]
 - !private ["CSo8NSObject", "bounds"]
+- !private ["CSo8NSObject", "duration"]
 - !private ["CSo8NSObject", "gameCode"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "kCATransitionFade"]
+- !private ["CSo8NSObject", "layer"]
 - !private ["CSo8NSObject", "load"]
 - !private ["CSo8NSObject", "loadGame"]
 - !private ["CSo8NSObject", "mainScreen"]
@@ -332,14 +433,20 @@ depends-member:
 - !private ["CSo8NSObject", "rootViewController"]
 - !private ["CSo8NSObject", "saveGame"]
 - !private ["CSo8NSObject", "sharedInstance"]
-- ["CSo8NSObject", "viewController"]
+- !private ["CSo8NSObject", "type"]
+- !private ["CSo8NSObject", "view"]
+- !private ["CSo8NSObject", "whiteColor"]
 - ["CSo8NSObject", "window"]
 - !private ["PSo16NSObjectProtocol", "AssetManager"]
+- !private ["PSo16NSObjectProtocol", "CATransition"]
+- !private ["PSo16NSObjectProtocol", "EZLoadingActivity"]
 - !private ["PSo16NSObjectProtocol", "SettingsController"]
 - !private ["PSo16NSObjectProtocol", "StartController"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UINavigationController"]
 - !private ["PSo16NSObjectProtocol", "UIScreen"]
 - !private ["PSo16NSObjectProtocol", "UIWindow"]
+- !private ["PSo16NSObjectProtocol", "addAnimation"]
 - ["PSo16NSObjectProtocol", "application"]
 - ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
 - ["PSo16NSObjectProtocol", "applicationDidEnterBackground"]
@@ -352,9 +459,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillEnterForeground"]
 - ["PSo16NSObjectProtocol", "applicationWillResignActive"]
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
+- !private ["PSo16NSObjectProtocol", "blackColor"]
 - !private ["PSo16NSObjectProtocol", "bounds"]
+- !private ["PSo16NSObjectProtocol", "duration"]
 - !private ["PSo16NSObjectProtocol", "gameCode"]
 - ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "kCATransitionFade"]
+- !private ["PSo16NSObjectProtocol", "layer"]
 - !private ["PSo16NSObjectProtocol", "load"]
 - !private ["PSo16NSObjectProtocol", "loadGame"]
 - !private ["PSo16NSObjectProtocol", "mainScreen"]
@@ -366,27 +477,44 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "rootViewController"]
 - !private ["PSo16NSObjectProtocol", "saveGame"]
 - !private ["PSo16NSObjectProtocol", "sharedInstance"]
-- ["PSo16NSObjectProtocol", "viewController"]
+- !private ["PSo16NSObjectProtocol", "type"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- !private ["PSo16NSObjectProtocol", "whiteColor"]
 - ["PSo16NSObjectProtocol", "window"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "blackColor"]
+- !private ["PSo14NSSecureCoding", "whiteColor"]
 - !private ["Sq", "deinit"]
+- !private ["VV17EZLoadingActivity17EZLoadingActivity8Settings", "ActivityColor"]
+- !private ["VV17EZLoadingActivity17EZLoadingActivity8Settings", "BackgroundColor"]
+- !private ["VV17EZLoadingActivity17EZLoadingActivity8Settings", "FailText"]
+- !private ["VV17EZLoadingActivity17EZLoadingActivity8Settings", "FontName"]
+- !private ["VV17EZLoadingActivity17EZLoadingActivity8Settings", "SuccessText"]
+- !private ["VV17EZLoadingActivity17EZLoadingActivity8Settings", "TextColor"]
 - !private ["C16Trivia_Challenge18SettingsController", "init"]
 - !private ["C16Trivia_Challenge15StartController", "init"]
 - !private ["C16Trivia_Challenge18TemplateController", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "layer"]
 - !private ["PSo29UIAccessibilityIdentification", "makeKeyAndVisible"]
 - !private ["PSo29UIAccessibilityIdentification", "rootViewController"]
 - !private ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "layer"]
 - !private ["PSo12UIAppearance", "makeKeyAndVisible"]
 - !private ["PSo12UIAppearance", "rootViewController"]
 - !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "layer"]
 - !private ["PSo21UIAppearanceContainer", "makeKeyAndVisible"]
 - !private ["PSo21UIAppearanceContainer", "navigationBarHidden"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "rootViewController"]
+- !private ["PSo21UIAppearanceContainer", "view"]
 - !private ["PSo21UIApplicationDelegate", "AssetManager"]
+- !private ["PSo21UIApplicationDelegate", "CATransition"]
+- !private ["PSo21UIApplicationDelegate", "EZLoadingActivity"]
 - !private ["PSo21UIApplicationDelegate", "SettingsController"]
 - !private ["PSo21UIApplicationDelegate", "StartController"]
+- !private ["PSo21UIApplicationDelegate", "UIColor"]
 - !private ["PSo21UIApplicationDelegate", "UINavigationController"]
 - !private ["PSo21UIApplicationDelegate", "UIScreen"]
 - !private ["PSo21UIApplicationDelegate", "UIWindow"]
@@ -402,38 +530,48 @@ depends-member:
 - ["PSo21UIApplicationDelegate", "applicationWillEnterForeground"]
 - ["PSo21UIApplicationDelegate", "applicationWillResignActive"]
 - ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
+- !private ["PSo21UIApplicationDelegate", "kCATransitionFade"]
 - !private ["PSo21UIApplicationDelegate", "print"]
-- !private ["PSo21UIApplicationDelegate", "viewController"]
 - ["PSo21UIApplicationDelegate", "window"]
 - ["PSo21UIApplicationDelegate", ""]
+- !private ["CSo7UIColor", "blackColor"]
+- !private ["CSo7UIColor", "whiteColor"]
 - !private ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "navigationBarHidden"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
+- !private ["PSo18UIContentContainer", "view"]
 - !private ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "layer"]
 - !private ["PSo17UICoordinateSpace", "makeKeyAndVisible"]
 - !private ["PSo17UICoordinateSpace", "rootViewController"]
 - !private ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "layer"]
 - !private ["PSo13UIDynamicItem", "makeKeyAndVisible"]
 - !private ["PSo13UIDynamicItem", "rootViewController"]
 - !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "layer"]
 - !private ["PSo18UIFocusEnvironment", "makeKeyAndVisible"]
 - !private ["PSo18UIFocusEnvironment", "navigationBarHidden"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "rootViewController"]
+- !private ["PSo18UIFocusEnvironment", "view"]
 - !private ["CSo22UINavigationController", "init"]
 - !private ["CSo22UINavigationController", "navigationBarHidden"]
 - !private ["CSo22UINavigationController", "pushViewController"]
+- !private ["CSo22UINavigationController", "view"]
 - ["CSo11UIResponder", "AnyObject"]
 - !private ["CSo11UIResponder", "AssetManager"]
 - ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "CATransition"]
+- !private ["CSo11UIResponder", "EZLoadingActivity"]
 - !private ["CSo11UIResponder", "JSON"]
 - ["CSo11UIResponder", "NSObject"]
 - !private ["CSo11UIResponder", "SettingsController"]
 - !private ["CSo11UIResponder", "StartController"]
 - ["CSo11UIResponder", "UIApplication"]
+- !private ["CSo11UIResponder", "UIColor"]
 - !private ["CSo11UIResponder", "UINavigationController"]
 - !private ["CSo11UIResponder", "UIScreen"]
-- ["CSo11UIResponder", "UIViewController"]
 - ["CSo11UIResponder", "UIWindow"]
 - ["CSo11UIResponder", "application"]
 - ["CSo11UIResponder", "applicationDidBecomeActive"]
@@ -448,12 +586,14 @@ depends-member:
 - ["CSo11UIResponder", "applicationWillResignActive"]
 - ["CSo11UIResponder", "applicationWillTerminate"]
 - ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "kCATransitionFade"]
+- !private ["CSo11UIResponder", "layer"]
 - !private ["CSo11UIResponder", "makeKeyAndVisible"]
 - !private ["CSo11UIResponder", "navigationBarHidden"]
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "rootViewController"]
-- ["CSo11UIResponder", "viewController"]
+- !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
 - !private ["CSo8UIScreen", "bounds"]
@@ -461,27 +601,35 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "navigationBarHidden"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
+- !private ["PSo16UIStateRestoring", "view"]
 - !private ["PSo18UITraitEnvironment", "bounds"]
 - !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "layer"]
 - !private ["PSo18UITraitEnvironment", "mainScreen"]
 - !private ["PSo18UITraitEnvironment", "makeKeyAndVisible"]
 - !private ["PSo18UITraitEnvironment", "navigationBarHidden"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "rootViewController"]
+- !private ["PSo18UITraitEnvironment", "view"]
 - !private ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "layer"]
 - !private ["CSo6UIView", "makeKeyAndVisible"]
 - !private ["CSo6UIView", "rootViewController"]
 - !private ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "navigationBarHidden"]
 - !private ["CSo16UIViewController", "pushViewController"]
+- !private ["CSo16UIViewController", "view"]
 - !private ["CSo8UIWindow", "init"]
 - !private ["CSo8UIWindow", "makeKeyAndVisible"]
 - !private ["CSo8UIWindow", "rootViewController"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps24_ColorLiteralConvertible", "blackColor"]
+- !private ["Ps24_ColorLiteralConvertible", "whiteColor"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "layer"]
 - !private ["Ps12_Reflectable", "makeKeyAndVisible"]
 - !private ["Ps12_Reflectable", "rootViewController"]
 depends-nominal:
@@ -491,16 +639,25 @@ depends-nominal:
 - !private "Sb"
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
+- !private "PSo8CAAction"
+- !private "CSo11CAAnimation"
+- !private "CSo7CALayer"
+- !private "PSo13CAMediaTiming"
+- !private "CSo12CATransition"
 - "Ps11CVarArgType"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
+- !private "V17EZLoadingActivity17EZLoadingActivity"
 - "Ps9Equatable"
 - "Ps8Hashable"
 - !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
 - !private "PSo26NSExtensionRequestHandling"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
 - !private "Sq"
+- !private "VV17EZLoadingActivity17EZLoadingActivity8Settings"
 - !private "C16Trivia_Challenge18SettingsController"
 - !private "C16Trivia_Challenge15StartController"
 - !private "C16Trivia_Challenge18TemplateController"
@@ -508,6 +665,7 @@ depends-nominal:
 - !private "PSo12UIAppearance"
 - !private "PSo21UIAppearanceContainer"
 - "PSo21UIApplicationDelegate"
+- !private "CSo7UIColor"
 - !private "PSo18UIContentContainer"
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
@@ -521,6 +679,7 @@ depends-nominal:
 - !private "CSo16UIViewController"
 - !private "CSo8UIWindow"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps24_ColorLiteralConvertible"
 - !private "Ps21_ObjectiveCBridgeable"
 - !private "Vs26_OptionalNilComparisonType"
 - !private "Ps12_Reflectable"
@@ -538,8 +697,12 @@ depends-external:
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Modules/EZLoadingActivity.swiftmodule/i386.swiftmodule"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Headers/EZLoadingActivity-Swift.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Headers/EZLoadingActivity-umbrella.h"
+- "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Modules/module.modulemap"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/i386.swiftmodule"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "cd2f288e421422f5bf5e297de16c966e"
+interface-hash: "23d45d8b508af50f4e4103cf04e33737"

@@ -100,14 +100,12 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class UIWindow;
-@class UIViewController;
 @class UIApplication;
 @class NSObject;
 
 SWIFT_CLASS("_TtC16Trivia_Challenge11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
-@property (nonatomic, strong) UIViewController * _Nullable viewController;
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary * _Nullable)launchOptions;
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
 - (void)applicationDidEnterBackground:(UIApplication * _Nonnull)application;
@@ -170,13 +168,14 @@ SWIFT_CLASS("_TtC16Trivia_Challenge8Question")
 
 SWIFT_CLASS("_TtC16Trivia_Challenge18TemplateController")
 @interface TemplateController : UIViewController
-@property (nonatomic, copy) NSString * _Nullable pageType;
+@property (nonatomic, readonly, copy) NSString * _Nonnull pageType;
 @property (nonatomic, copy) NSString * _Nullable gameCode;
 @property (nonatomic, strong) NSMutableDictionary * _Nonnull viewDictionary;
 @property (nonatomic, strong) NSMutableDictionary * _Nonnull placeholderImages;
-@property (nonatomic, strong) NSMutableDictionary * _Nonnull variables;
+- (void)viewDidLoad;
 - (void)loadImages;
 - (void)loadText;
+- (NSTextAlignment)parseJustification:(NSString * _Nonnull)justification;
 - (void)loadButtons;
 - (void)loadInputs;
 - (NSString * _Nullable)addGameState:(NSString * _Nullable)input;
@@ -194,6 +193,7 @@ SWIFT_CLASS("_TtC16Trivia_Challenge18TemplateController")
 
 SWIFT_CLASS("_TtC16Trivia_Challenge19QuestionsController")
 @interface QuestionsController : TemplateController
+@property (nonatomic, readonly, copy) NSString * _Nonnull pageType;
 - (void)viewDidLoad;
 - (void)setupButtons;
 - (void)guess:(UIButton * _Nonnull)button;
@@ -204,7 +204,9 @@ SWIFT_CLASS("_TtC16Trivia_Challenge19QuestionsController")
 
 SWIFT_CLASS("_TtC16Trivia_Challenge17ResultsController")
 @interface ResultsController : TemplateController
+@property (nonatomic, readonly, copy) NSString * _Nonnull pageType;
 - (void)viewDidLoad;
+- (void)setupButtons;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -212,6 +214,7 @@ SWIFT_CLASS("_TtC16Trivia_Challenge17ResultsController")
 
 SWIFT_CLASS("_TtC16Trivia_Challenge18SettingsController")
 @interface SettingsController : TemplateController
+@property (nonatomic, readonly, copy) NSString * _Nonnull pageType;
 - (void)viewDidLoad;
 - (void)setupButtons;
 - (void)loadGame;
@@ -222,6 +225,7 @@ SWIFT_CLASS("_TtC16Trivia_Challenge18SettingsController")
 
 SWIFT_CLASS("_TtC16Trivia_Challenge15StartController")
 @interface StartController : TemplateController
+@property (nonatomic, readonly, copy) NSString * _Nonnull pageType;
 - (void)viewDidLoad;
 - (void)setupButtons;
 - (void)loadQuestions;

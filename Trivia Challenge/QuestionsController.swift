@@ -8,18 +8,11 @@
 import UIKit
 
 class QuestionsController: TemplateController {
+    override var pageType: String { return "question" }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
-        self.pageType = "question"
         
-        self.loadBackgroundColor()
-        self.loadImages()
-        self.loadInputs()
-        self.loadButtons()
-        self.loadText()
         self.setupButtons()
     }
     

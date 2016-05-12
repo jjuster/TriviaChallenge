@@ -31,6 +31,33 @@
     },
     {
       'type': 'directory',
+      'name': "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "EZLoadingActivity-Swift.h",
+          'external-contents': "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Headers/EZLoadingActivity-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "EZLoadingActivity-umbrella.h",
+          'external-contents': "/Users/joshjuster/projects/Trivia Challenge/Pods/Target Support Files/EZLoadingActivity/EZLoadingActivity-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Intermediates/Pods.build/Debug-iphonesimulator/EZLoadingActivity.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
       'name': "/Users/joshjuster/projects/Trivia Challenge/DerivedData/Trivia Challenge/Build/Products/Debug-iphonesimulator/Pods_Trivia_Challenge.framework/Headers",
       'contents': [
         {

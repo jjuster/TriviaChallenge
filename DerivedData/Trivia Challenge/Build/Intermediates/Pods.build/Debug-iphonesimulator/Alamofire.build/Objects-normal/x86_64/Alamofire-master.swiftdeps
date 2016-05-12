@@ -1,0 +1,21 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "226a28538343f55a9519551248bbd4db"
+build_time: [516335854, 946669000]
+inputs:
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Alamofire.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Download.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Error.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Manager.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/MultipartFormData.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/NetworkReachabilityManager.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Notifications.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/ParameterEncoding.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Request.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Response.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/ResponseSerialization.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Result.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/ServerTrustPolicy.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Stream.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Timeline.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Upload.swift": [516221819, 0]
+  "/Users/joshjuster/projects/Trivia Challenge/Pods/Alamofire/Source/Validation.swift": [516221819, 0]

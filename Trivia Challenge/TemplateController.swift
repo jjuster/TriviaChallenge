@@ -9,17 +9,29 @@ import UIKit
 import SwiftyJSON
 
 class TemplateController: UIViewController {
-    var pageType : String?
+    var pageType: String { return "" }
     var gameCode : String?
     var viewDictionary : NSMutableDictionary = NSMutableDictionary()
     var placeholderImages : NSMutableDictionary = NSMutableDictionary()
-    var variables : NSMutableDictionary = NSMutableDictionary()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let am = AssetManager.sharedInstance
+        if (am.game != nil && am.game!["theme"]["pages"][self.pageType].exists()) {
+            self.loadBackgroundColor()
+            self.loadImages()
+            self.loadInputs()
+            self.loadButtons()
+            self.loadText()
+        }
+    }
     
     func loadImages() {
         let am = AssetManager.sharedInstance
-        let multiple = am.gameMultiple(self.pageType!)
+        let multiple = am.gameMultiple(self.pageType)
         
-        let objectsJson = am.getObjects(self.pageType!, objectType: .IMAGE)
+        let objectsJson = am.getObjects(self.pageType, objectType: .IMAGE)
         
         if (objectsJson != nil) {
             for objectJson in objectsJson! {
@@ -27,7 +39,7 @@ class TemplateController: UIViewController {
                 let w = objectJson["width"].floatValue / Float(multiple.x)
                 let h = objectJson["height"].floatValue / Float(multiple.y)
                 
-                let image = UIImage(data: NSData(contentsOfURL: am.filePath(self.pageType!, objectType: .IMAGE, title: title)!)!, scale: UIScreen.mainScreen().scale)
+                let image = UIImage(data: NSData(contentsOfURL: am.filePath(self.pageType, objectType: .IMAGE, title: title)!)!, scale: UIScreen.mainScreen().scale)
                 
                 if (objectJson["x"].exists() && objectJson["y"].exists()) {
                     let x = objectJson["x"].floatValue / Float(multiple.x)
@@ -48,9 +60,9 @@ class TemplateController: UIViewController {
     
     func loadText() {
         let am = AssetManager.sharedInstance
-        let multiple = am.gameMultiple(self.pageType!)
+        let multiple = am.gameMultiple(self.pageType)
         
-        let objectsJson = am.getObjects(self.pageType!, objectType: .TEXT)
+        let objectsJson = am.getObjects(self.pageType, objectType: .TEXT)
         
         if (objectsJson != nil) {
             for objectJson in objectsJson! {
@@ -85,22 +97,7 @@ class TemplateController: UIViewController {
                     }
                     
                     if (objectJson["justification"].exists()) {
-                        switch objectJson["justification"].stringValue {
-                        case "left":
-                            justification = NSTextAlignment.Left
-                            break
-                        case "center":
-                            justification = NSTextAlignment.Center
-                            break
-                        case "right":
-                            justification = NSTextAlignment.Right
-                            break
-                        case "justified":
-                            justification = NSTextAlignment.Justified
-                            break
-                        default:
-                            justification = NSTextAlignment.Center
-                        }
+                        justification = self.parseJustification(objectJson["justification"].stringValue)
                     } else {
                         justification = NSTextAlignment.Center
                     }
@@ -131,11 +128,26 @@ class TemplateController: UIViewController {
         }
     }
     
+    func parseJustification(justification: String) -> NSTextAlignment {
+        switch justification {
+        case "left":
+            return NSTextAlignment.Left
+        case "center":
+            return NSTextAlignment.Center
+        case "right":
+            return NSTextAlignment.Right
+        case "justified":
+            return NSTextAlignment.Justified
+        default:
+            return NSTextAlignment.Center
+        }
+    }
+    
     func loadButtons() {
         let am = AssetManager.sharedInstance
-        let multiple = am.gameMultiple(self.pageType!)
+        let multiple = am.gameMultiple(self.pageType)
         
-        let objectsJson = am.getObjects(self.pageType!, objectType: .BUTTON)
+        let objectsJson = am.getObjects(self.pageType, objectType: .BUTTON)
         
         if (objectsJson != nil) {
             for objectJson in objectsJson! {
@@ -171,22 +183,7 @@ class TemplateController: UIViewController {
                     }
                     
                     if (objectJson["justification"].exists()) {
-                        switch objectJson["justification"].stringValue {
-                        case "left":
-                            justification = NSTextAlignment.Left
-                            break
-                        case "center":
-                            justification = NSTextAlignment.Center
-                            break
-                        case "right":
-                            justification = NSTextAlignment.Right
-                            break
-                        case "justified":
-                            justification = NSTextAlignment.Justified
-                            break
-                        default:
-                            justification = NSTextAlignment.Center
-                        }
+                        justification = self.parseJustification(objectJson["justification"].stringValue)
                     } else {
                         justification = NSTextAlignment.Center
                     }
@@ -203,7 +200,7 @@ class TemplateController: UIViewController {
                 }
                 
                 if (text == nil || gameText != nil) {
-                    let url = am.filePath(self.pageType!, objectType: .BUTTON, title: title)
+                    let url = am.filePath(self.pageType, objectType: .BUTTON, title: title)
                     if (url != nil) {
                         let image = UIImage(data: NSData(contentsOfURL: url!)!, scale: UIScreen.mainScreen().scale)
                         
@@ -221,9 +218,9 @@ class TemplateController: UIViewController {
     
     func loadInputs() {
         let am = AssetManager.sharedInstance
-        let multiple = am.gameMultiple(self.pageType!)
+        let multiple = am.gameMultiple(self.pageType)
         
-        let objectsJson = am.getObjects(self.pageType!, objectType: .INPUT)
+        let objectsJson = am.getObjects(self.pageType, objectType: .INPUT)
         
         if (objectsJson != nil) {
             for objectJson in objectsJson! {
@@ -249,22 +246,7 @@ class TemplateController: UIViewController {
                 
                 var justification: NSTextAlignment?
                 if (objectJson["justification"].exists()) {
-                    switch objectJson["justification"].stringValue {
-                    case "left":
-                        justification = NSTextAlignment.Left
-                        break
-                    case "center":
-                        justification = NSTextAlignment.Center
-                        break
-                    case "right":
-                        justification = NSTextAlignment.Right
-                        break
-                    case "justified":
-                        justification = NSTextAlignment.Justified
-                        break
-                    default:
-                        justification = NSTextAlignment.Center
-                    }
+                    justification = self.parseJustification(objectJson["justification"].stringValue)
                 } else {
                     justification = NSTextAlignment.Center
                 }
@@ -272,7 +254,7 @@ class TemplateController: UIViewController {
                 let textField = UITextField()
                 textField.translatesAutoresizingMaskIntoConstraints = false
                 
-                let image = UIImage(data: NSData(contentsOfURL: am.filePath(self.pageType!, objectType: .INPUT, title: title)!)!, scale: UIScreen.mainScreen().scale)
+                let image = UIImage(data: NSData(contentsOfURL: am.filePath(self.pageType, objectType: .INPUT, title: title)!)!, scale: UIScreen.mainScreen().scale)
                 
                 textField.background = image
                 textField.font = UIFont(name: "Gotham", size: CGFloat(size!))
@@ -326,7 +308,7 @@ class TemplateController: UIViewController {
     
     func loadBackgroundColor() {
         let am = AssetManager.sharedInstance
-        let backgroundColor = am.getProperty(self.pageType!, title: "background_color")
+        let backgroundColor = am.getProperty(self.pageType, title: "background_color")
         if (backgroundColor != nil) {
             self.view.backgroundColor = UIColor(hex: backgroundColor!)
         }
@@ -335,13 +317,15 @@ class TemplateController: UIViewController {
     func restart() {
         let am = AssetManager.sharedInstance
         am.reloadGameState()
-        
-        self.loadVC(StartController())
+
+        let vc = self.navigationController!.viewControllers.first
+        vc?.viewDidLoad()
+        self.navigationController!.popToRootViewControllerAnimated(false)
     }
     
     func loadVC(vc: UIViewController) {
-        let navigationController = UINavigationController(rootViewController: vc)
-        self.presentViewController(navigationController, animated: false, completion: nil)
+        self.viewDictionary.removeAllObjects()
+        self.navigationController!.pushViewController(vc, animated: false)
     }
     
     override func didReceiveMemoryWarning() {

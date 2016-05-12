@@ -277,7 +277,7 @@ class AssetManager : NSObject {
         let url = "\(host)/assets/load?code=\(code)"
         print("URL:",url)
         Alamofire.request(.GET, url, encoding: .JSON)
-            .responseJSON { response in
+            .responseJSON { response in                
                 switch response.result {
                 case .Success:
                     if let blob = response.result.value {

@@ -8,16 +8,22 @@
 
 import UIKit
 import SwiftyJSON
+import EZLoadingActivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var viewController: UIViewController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let nav = UINavigationController()
+        let nav = UINavigationController(rootViewController: StartController())
+        
+        let transition = CATransition()
+        transition.duration = 0.2
+        transition.type = kCATransitionFade
+        nav.view.layer.addAnimation(transition, forKey: nil)
+        
         nav.navigationBarHidden = true
         
         let frame = UIScreen.mainScreen().bounds
@@ -28,28 +34,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let am = AssetManager.sharedInstance
         let game = am.loadGame()
         
+        EZLoadingActivity.Settings.SuccessText = "Initialized"
+        EZLoadingActivity.Settings.FontName = "Gotham"
+        EZLoadingActivity.Settings.BackgroundColor = UIColor.blackColor()
+        EZLoadingActivity.Settings.TextColor = UIColor.whiteColor()
+        EZLoadingActivity.Settings.ActivityColor = UIColor.whiteColor()
+        
         if (game == nil) {
+            EZLoadingActivity.show("Initializing", disableUI: true)
             AssetManager.sharedInstance.load("FIRSTLOAD", success: { (game : JSON) in
                 AssetManager.sharedInstance.saveGame(game, success: {
+                    EZLoadingActivity.hide(success: true, animated: true)
+                    
                     AssetManager.sharedInstance.loadGame()
-                    self.viewController = SettingsController()
-                    nav.pushViewController(self.viewController!, animated: false)
+                    nav.pushViewController(SettingsController(), animated: false)
                 }, failure: { (error) in
                     print("ERROR", error)
+                    EZLoadingActivity.Settings.FailText = "Save Failed"
+                    EZLoadingActivity.hide(success: false, animated: true)
                 })
             }, failure: { (error) in
                 print("ERROR", error)
+                EZLoadingActivity.Settings.FailText = "Load Failed"
+                EZLoadingActivity.hide(success: false, animated: true)
             })
         } else {
             if (am.gameCode()! == "FIRSTLOAD") {
-                self.viewController = SettingsController()
+                nav.pushViewController(SettingsController(), animated: false)
             } else {
                 am.reloadGameState()
-                self.viewController = StartController()
             }
-            nav.pushViewController(self.viewController!, animated: false)
+            
         }
-        
         
         return true
     }
