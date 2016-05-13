@@ -25,10 +25,14 @@ class Game : NSObject {
     
     func getProp(prop: String) -> String? {
         switch(prop) {
+            case "[questionIds]":
+                return self.questionIds()
+            case "[questionId]":
+                return String(self.currentQuestion()!.questionId!)
             case "[numCorrect]":
                 return String(correctAnswers)
             case "[questionNumber]":
-                return String(questionIndex)
+                return String(questionIndex + 1)
             case "[questionCount]":
                 return String(numberQuestions!)
             case "[question]":
@@ -58,6 +62,17 @@ class Game : NSObject {
         }
     }
     
+    func questionIds() -> String {
+        var questionIds = ""
+        for (i, question) in self.questions.enumerate() {
+            questionIds += "\(question.questionId!)"
+            if (i < self.questions.count - 1) {
+                questionIds += ", "
+            }
+        }
+        
+        return questionIds
+    }
     
     func feedbackMessage() -> String {
         let score = Float(self.correctAnswers) / Float(self.numberQuestions!)

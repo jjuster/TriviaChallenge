@@ -19,24 +19,29 @@ class SettingsController: TemplateController {
     }
     
     func setupButtons() {
-        if (self.viewDictionary["load_button"] != nil) {
-            let loadButton : UIButton = self.viewDictionary["load_button"] as! UIButton
+        let loadTag = self.viewTags["load_button"]
+        
+        if (loadTag != nil) {
+            let loadButton : UIButton = self.view.viewWithTag(loadTag!) as! UIButton
             loadButton.addTarget(self, action: #selector(self.loadGame), forControlEvents: .TouchUpInside)
         }
         
-        if (self.viewDictionary["cancel_button"] != nil) {
-            let loadButton : UIButton = self.viewDictionary["cancel_button"] as! UIButton
-            loadButton.addTarget(self, action: #selector(self.restart), forControlEvents: .TouchUpInside)
+        let cancelTag = self.viewTags["cancel_button"]
+        
+        if (cancelTag != nil) {
+            let cancelButton : UIButton = self.view.viewWithTag(cancelTag!) as! UIButton
+            cancelButton.addTarget(self, action: #selector(self.restart), forControlEvents: .TouchUpInside)
         }
     }
     
     func loadGame() {
-        if (self.viewDictionary["code_input"] == nil) {
+        let codeTag = self.viewTags["code_input"]
+        
+        if (codeTag == nil) {
             print("ERROR", "NO CODE INPUT")
             return
         }
-        
-        let codeInput : UITextField = self.viewDictionary["code_input"] as! UITextField
+        let codeInput : UITextField = self.view.viewWithTag(codeTag!) as! UITextField
         
         EZLoadingActivity.Settings.SuccessText = "Game Loaded"
         EZLoadingActivity.show("Loading Game", disableUI: true)

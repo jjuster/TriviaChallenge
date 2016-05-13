@@ -207,6 +207,7 @@ class AssetManager : NSObject {
         
         for questionJson in self.game!["questions"].arrayValue {
             let question = Question()
+            question.questionId = questionJson["id"].intValue
             question.question = questionJson["question"].stringValue
             question.correctAnswer = questionJson["correct_answer"].intValue
             

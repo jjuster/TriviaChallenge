@@ -12,18 +12,22 @@ class StartController: TemplateController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         self.setupButtons()
     }
     
     func setupButtons() {
-        if (self.viewDictionary["play_button"] != nil) {
-            let settingsButton : UIButton = self.viewDictionary["play_button"] as! UIButton
-            settingsButton.addTarget(self, action: #selector(self.loadQuestions), forControlEvents: .TouchUpInside)
+        let playTag = self.viewTags["play_button"]
+        
+        if (playTag != nil) {
+            let playButton : UIButton = self.view.viewWithTag(playTag!) as! UIButton
+            playButton.addTarget(self, action: #selector(self.loadQuestions), forControlEvents: .TouchUpInside)
         }
-
-        if (self.viewDictionary["settings_button"] != nil) {
-            let settingsButton : UIButton = self.viewDictionary["settings_button"] as! UIButton
+        
+        let settingsTag = self.viewTags["settings_button"]
+        
+        if (settingsTag != nil) {
+            let settingsButton : UIButton = self.view.viewWithTag(settingsTag!) as! UIButton
             settingsButton.addTarget(self, action: #selector(self.loadSettings), forControlEvents: .TouchUpInside)
         }
     }

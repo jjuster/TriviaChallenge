@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: frame)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
-        
+                
         let am = AssetManager.sharedInstance
         let game = am.loadGame()
         

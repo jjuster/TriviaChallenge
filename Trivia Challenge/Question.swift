@@ -9,6 +9,7 @@
 import Foundation
 
 class Question : NSObject {
+    var questionId : Int?
     var question : String?
     var answer_1 : String?
     var answer_2 : String?

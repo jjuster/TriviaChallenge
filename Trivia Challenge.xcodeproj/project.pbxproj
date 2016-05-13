@@ -22,6 +22,7 @@
 		8147996E1CE3D04700B07F36 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147996D1CE3D04700B07F36 /* Game.swift */; };
 		814799701CE3D0F900B07F36 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147996F1CE3D0F900B07F36 /* Question.swift */; };
 		814799721CE3DC5800B07F36 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814799711CE3DC5800B07F36 /* CollectionExtensions.swift */; };
+		814799741CE587B700B07F36 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814799731CE587B700B07F36 /* UIImageExtensions.swift */; };
 		FC9DD62C2A9604258E9833E2 /* Pods_Trivia_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C6CA574D483116DD4FA2DD /* Pods_Trivia_Challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		8147996D1CE3D04700B07F36 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8147996F1CE3D0F900B07F36 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		814799711CE3DC5800B07F36 /* CollectionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
+		814799731CE587B700B07F36 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		9ECFEC537B7C3396C990CC00 /* Pods-Trivia Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trivia Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trivia Challenge/Pods-Trivia Challenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				813999AE1CE301A700615935 /* UIViewExtensions.swift */,
 				813999B21CE37B1400615935 /* UIColorExtensions.swift */,
 				814799711CE3DC5800B07F36 /* CollectionExtensions.swift */,
+				814799731CE587B700B07F36 /* UIImageExtensions.swift */,
 			);
 			path = "Trivia Challenge";
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				813999AF1CE301A700615935 /* UIViewExtensions.swift in Sources */,
 				813999971CE2384B00615935 /* StartController.swift in Sources */,
 				813999AD1CE2FB5D00615935 /* ResultsController.swift in Sources */,
+				814799741CE587B700B07F36 /* UIImageExtensions.swift in Sources */,
 				813999A71CE268B700615935 /* AssetManager.swift in Sources */,
 				8147996E1CE3D04700B07F36 /* Game.swift in Sources */,
 				8147996A1CE39B9200B07F36 /* TemplateController.swift in Sources */,

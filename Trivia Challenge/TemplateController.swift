@@ -11,8 +11,10 @@ import SwiftyJSON
 class TemplateController: UIViewController {
     var pageType: String { return "" }
     var gameCode : String?
-    var viewDictionary : NSMutableDictionary = NSMutableDictionary()
     var placeholderImages : [String:UIImage] = [String:UIImage]()
+    
+    var tagIndex : Int = 0
+    var viewTags : [String: Int] = [String: Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +41,8 @@ class TemplateController: UIViewController {
                 let w = objectJson["width"].floatValue / Float(multiple.x)
                 let h = objectJson["height"].floatValue / Float(multiple.y)
                 
-                let image = UIImage(data: NSData(contentsOfURL: am.filePath(self.pageType, objectType: .IMAGE, title: title)!)!, scale: UIScreen.mainScreen().scale)
+                let data = NSData(contentsOfURL: am.filePath(self.pageType, objectType: .IMAGE, title: title)!)
+                let image = UIImage(data: data!)!.scaleTo(UIScreen.mainScreen().scale)
                 
                 if (objectJson["x"].exists() && objectJson["y"].exists()) {
                     let x = objectJson["x"].floatValue / Float(multiple.x)
@@ -47,15 +50,21 @@ class TemplateController: UIViewController {
                     
                     let imageView = UIImageView(image: image)
                     imageView.translatesAutoresizingMaskIntoConstraints = false
-                    self.viewDictionary[title] = imageView
                     self.view.addSubview(imageView)
-                    self.view.addConstraintFormat("H:|-(\(x))-[\(title)(\(w))]", views: viewDictionary)
-                    self.view.addConstraintFormat("V:|-(\(y))-[\(title)(\(h))]", views: viewDictionary)
+                    imageView.tag = self.setTag(title)
+                    self.view.addConstraintFormat("H:|-(\(x))-[\(title)(\(w))]", views: [title: imageView])
+                    self.view.addConstraintFormat("V:|-(\(y))-[\(title)(\(h))]", views: [title: imageView])
                 } else {
                     self.placeholderImages[title] = image
                 }
             }
         }
+    }
+    
+    func setTag(title: String) -> Int {
+        self.tagIndex += 1
+        self.viewTags[title] = self.tagIndex
+        return self.tagIndex
     }
     
     func loadText() {
@@ -121,10 +130,10 @@ class TemplateController: UIViewController {
                     h = size!
                 }
                 
-                self.viewDictionary[title] = label
                 self.view.addSubview(label)
-                self.view.addConstraintFormat("H:|-(\(x))-[\(title)(\(w))]", views: viewDictionary)
-                self.view.addConstraintFormat("V:|-(\(y))-[\(title)(\(h))]", views: viewDictionary)
+                label.tag = self.setTag(title)
+                self.view.addConstraintFormat("H:|-(\(x))-[\(title)(\(w))]", views: [title: label])
+                self.view.addConstraintFormat("V:|-(\(y))-[\(title)(\(h))]", views: [title: label])
             }
         }
     }
@@ -204,15 +213,16 @@ class TemplateController: UIViewController {
                 if (text == nil || gameText != nil) {
                     let url = am.filePath(self.pageType, objectType: .BUTTON, title: title)
                     if (url != nil) {
-                        let image = UIImage(data: NSData(contentsOfURL: url!)!, scale: UIScreen.mainScreen().scale)
+                        let data = NSData(contentsOfURL: url!)
+                        let image = UIImage(data: data!)!.scaleTo(UIScreen.mainScreen().scale)
                         
                         button.setBackgroundImage(image, forState: .Normal)
                     }
                     
-                    self.viewDictionary[title] = button
                     self.view.addSubview(button)
-                    self.view.addConstraintFormat("H:|-(\(x))-[\(title)(\(w))]", views: viewDictionary)
-                    self.view.addConstraintFormat("V:|-(\(y))-[\(title)(\(h))]", views: viewDictionary)
+                    button.tag = self.setTag(title)
+                    self.view.addConstraintFormat("H:|-(\(x))-[\(title)(\(w))]", views: [title: button])
+                    self.view.addConstraintFormat("V:|-(\(y))-[\(title)(\(h))]", views: [title: button])
                 }
             }
         }
@@ -256,7 +266,8 @@ class TemplateController: UIViewController {
                 let textField = UITextField()
                 textField.translatesAutoresizingMaskIntoConstraints = false
                 
-                let image = UIImage(data: NSData(contentsOfURL: am.filePath(self.pageType, objectType: .INPUT, title: title)!)!, scale: UIScreen.mainScreen().scale)
+                let data = NSData(contentsOfURL: am.filePath(self.pageType, objectType: .INPUT, title: title)!)
+                let image = UIImage(data: data!)!.scaleTo(UIScreen.mainScreen().scale)
                 
                 textField.background = image
                 textField.font = UIFont(name: "Gotham", size: CGFloat(size!))
@@ -264,10 +275,10 @@ class TemplateController: UIViewController {
                 textField.contentVerticalAlignment = .Center
                 textField.textAlignment = justification!
                 
-                self.viewDictionary[title] = textField
                 self.view.addSubview(textField)
-                self.view.addConstraintFormat("H:|-(\(x))-[\(title)(\(w))]", views: viewDictionary)
-                self.view.addConstraintFormat("V:|-(\(y))-[\(title)(\(h))]", views: viewDictionary)
+                textField.tag = self.setTag(title)
+                self.view.addConstraintFormat("H:|-(\(x))-[\(title)(\(w))]", views: [title: textField])
+                self.view.addConstraintFormat("V:|-(\(y))-[\(title)(\(h))]", views: [title: textField])
             }
         }
     }
@@ -316,6 +327,10 @@ class TemplateController: UIViewController {
         }
     }
     
+    deinit {
+        print("DEINIT", String(self.dynamicType))
+    }
+    
     func restart() {
         let am = AssetManager.sharedInstance
         am.reloadGameState()
@@ -326,7 +341,6 @@ class TemplateController: UIViewController {
     }
     
     func loadVC(vc: UIViewController) {
-        self.viewDictionary.removeAllObjects()
         self.navigationController!.pushViewController(vc, animated: false)
     }
     

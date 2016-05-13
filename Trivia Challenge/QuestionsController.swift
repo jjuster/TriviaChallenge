@@ -18,38 +18,39 @@ class QuestionsController: TemplateController {
     }
     
     func setupButtons() {
-        if (self.viewDictionary["restart_button"] != nil) {
-            let restartButton : UIButton = self.viewDictionary["restart_button"] as! UIButton
+        let restartTag = self.viewTags["restart_button"]
+        if (restartTag != nil) {
+            let restartButton : UIButton = self.view.viewWithTag(restartTag!) as! UIButton
             restartButton.addTarget(self, action: #selector(self.restart), forControlEvents: .TouchUpInside)
         }
-        
-        if (self.viewDictionary["answer_1"] != nil) {
-            let answerButton1 : UIButton = self.viewDictionary["answer_1"] as! UIButton
-            answerButton1.tag = 1
+
+        let answerTag1 = self.viewTags["answer_1"]
+        if (answerTag1 != nil) {
+            let answerButton1 : UIButton = self.view.viewWithTag(answerTag1!) as! UIButton
             answerButton1.addTarget(self, action: #selector(self.guess), forControlEvents: .TouchUpInside)
         }
-        
-        if (self.viewDictionary["answer_2"] != nil) {
-            let answerButton2 : UIButton = self.viewDictionary["answer_2"] as! UIButton
-            answerButton2.tag = 2
+
+        let answerTag2 = self.viewTags["answer_2"]
+        if (answerTag2 != nil) {
+            let answerButton2 : UIButton = self.view.viewWithTag(answerTag2!) as! UIButton
             answerButton2.addTarget(self, action: #selector(self.guess), forControlEvents: .TouchUpInside)
         }
-        
-        if (self.viewDictionary["answer_3"] != nil) {
-            let answerButton3 : UIButton = self.viewDictionary["answer_3"] as! UIButton
-            answerButton3.tag = 3
+
+        let answerTag3 = self.viewTags["answer_3"]
+        if (answerTag3 != nil) {
+            let answerButton3 : UIButton = self.view.viewWithTag(answerTag3!) as! UIButton
             answerButton3.addTarget(self, action: #selector(self.guess), forControlEvents: .TouchUpInside)
         }
-        
-        if (self.viewDictionary["answer_4"] != nil) {
-            let answerButton4 : UIButton = self.viewDictionary["answer_4"] as! UIButton
-            answerButton4.tag = 4
+
+        let answerTag4 = self.viewTags["answer_4"]
+        if (answerTag4 != nil) {
+            let answerButton4 : UIButton = self.view.viewWithTag(answerTag4!) as! UIButton
             answerButton4.addTarget(self, action: #selector(self.guess), forControlEvents: .TouchUpInside)
         }
-        
-        if (self.viewDictionary["answer_5"] != nil) {
-            let answerButton5 : UIButton = self.viewDictionary["answer_5"] as! UIButton
-            answerButton5.tag = 5
+
+        let answerTag5 = self.viewTags["answer_5"]
+        if (answerTag5 != nil) {
+            let answerButton5 : UIButton = self.view.viewWithTag(answerTag5!) as! UIButton
             answerButton5.addTarget(self, action: #selector(self.guess), forControlEvents: .TouchUpInside)
         }
     }
@@ -62,7 +63,11 @@ class QuestionsController: TemplateController {
         
         let am = AssetManager.sharedInstance
         
-        if (button.tag == am.gameState!.currentQuestion()!.correctAnswer) {
+        let correctTitle = "answer_\(am.gameState!.currentQuestion()!.correctAnswer)"
+        let correctTag = self.viewTags[correctTitle]
+        let correctButton : UIButton = self.view.viewWithTag(correctTag!) as! UIButton
+        
+        if (button == correctButton) {
             am.gameState!.correctAnswers += 1
         } else {
             let toImage = self.placeholderImages["answer_incorrect"]!
@@ -73,8 +78,6 @@ class QuestionsController: TemplateController {
                                       completion: nil)
         }
         
-        let answerTitle = "answer_\(am.gameState!.currentQuestion()!.correctAnswer)"
-        let correctButton = self.viewDictionary[answerTitle] as! UIButton
         let toImage = self.placeholderImages["answer_correct"]
         UIView.transitionWithView(correctButton,
                                   duration: 0.3,
