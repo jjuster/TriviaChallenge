@@ -35,6 +35,8 @@ class SettingsController: TemplateController {
     }
     
     func loadGame() {
+        self.view.endEditing(true)
+        
         let codeTag = self.viewTags["code_input"]
         
         if (codeTag == nil) {

@@ -327,10 +327,6 @@ class TemplateController: UIViewController {
         }
     }
     
-    deinit {
-        print("DEINIT", String(self.dynamicType))
-    }
-    
     func restart() {
         let am = AssetManager.sharedInstance
         am.reloadGameState()
